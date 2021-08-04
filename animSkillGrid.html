@@ -11,7 +11,7 @@
 <div class="container-xxl m-3 p-0">
 
       <div class="d-flex align-items-start m-2 mr-3">
-        <div class="nav flex-column nav-pills m-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div class="nav flex-column nav-pills m-3 p-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <button class="nav-link active" id="v-pills-intro-tab" data-bs-toggle="pill" data-bs-target="#v-pills-intro" type="button" role="tab" aria-controls="v-pills-intro" aria-selected="true">Intro</button>
           <button class="nav-link" id="v-pills-woj-tab" data-bs-toggle="pill" data-bs-target="#v-pills-woj" type="button" role="tab" aria-controls="v-pills-woj" aria-selected="false">Wojownik</button>
           <button class="nav-link" id="v-pills-low-tab" data-bs-toggle="pill" data-bs-target="#v-pills-low" type="button" role="tab" aria-controls="v-pills-low" aria-selected="false">Łowca</button>
@@ -19,7 +19,8 @@
           <button class="nav-link" id="v-pills-pal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pal" type="button" role="tab" aria-controls="v-pills-pal" aria-selected="false">Paladyn</button>
           <button class="nav-link" id="v-pills-trop-tab" data-bs-toggle="pill" data-bs-target="#v-pills-trop" type="button" role="tab" aria-controls="v-pills-trop" aria-selected="false">Tropiciel</button>
           <button class="nav-link" id="v-pills-tanc-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tanc" type="button" role="tab" aria-controls="v-pills-tanc" aria-selected="false">Tancerz ostrzy</button>
-  
+          <button class="nav-link" id="v-pills-other-tab" data-bs-toggle="pill" data-bs-target="#v-pills-other" type="button" role="tab" aria-controls="v-pills-other" aria-selected="false">Pozostałe efekty</button>
+
         </div>
 
 
@@ -121,7 +122,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/taunt.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Wyzywający okrzyk</h5>
                       <p class="card-text">taunt<br><span class="self">self</span></p>
@@ -129,7 +130,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/woj/oslona-tarcza.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Osłona tarczą</h5>
                       <p class="card-text">armor boost tarczy<br><span class="self">self</span></p>
@@ -137,7 +138,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/woj/krwiozerczy-szal.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Krwiożerczy szał </h5>
                       <p class="card-text">lifesteal<br><span class="self">self</span></p>
@@ -145,7 +146,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/woj/agresywny-atak.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Agresywny atak</h5>
                       <p class="card-text">dmg boost<br><span class="enemy">enemy</span></p>
@@ -153,7 +154,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/woj/szarza.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Szarża</h5>
                       <p class="card-text">SA boost<br><span class="self">self</span></p>
@@ -251,7 +252,7 @@
                     <img src="img/low/wyniszczajce-rany.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Wyniszczające rany</h5>
-                      <p class="card-text">deals x% of max life<br><span class="enemy">enemy</span></p>
+                      <p class="card-text">deals x% of max life//poprawić bo sugeruje atak x3<br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
                   
@@ -267,7 +268,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Deszcz strzał</h5>
-                      <p class="card-text">multiple shots <span class="fire">fire</span>d<br><span class="self">self</span></p>
+                      <p class="card-text">multiple shots <span class="fire">fire</span>d<br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
                   
@@ -299,7 +300,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Oczyszczenie</h5>
-                      <p class="card-text">removes debuffs<br><span class="self">self</span></p>
+                      <p class="card-text">removes debuffs<br><span class="allies">allies</span></p>
                     </div>
                   </div>
                   
@@ -468,7 +469,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Tarcza odporności</h5>
-                      <p class="card-text">restist buff<br><span class="self">self</span></p>
+                      <p class="card-text">restist buff<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -476,7 +477,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Magiczna bariera</h5>
-                      <p class="card-text">shield<br><span class="self">self</span></p>
+                      <p class="card-text">shield<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -492,7 +493,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Klątwa</h5>
-                      <p class="card-text">marks for debuff<br><span class="enemy">enemy</span></p>
+                      <p class="card-text">attacks apply debuff or sth<br><span class="self">self</span></p>
                     </div>
                   </div>
 
@@ -587,7 +588,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/taunt.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Prowokujący okrzyk</h5>
                       <p class="card-text">taunt<br><span class="self">self</span></p>
@@ -630,7 +631,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Tarcza słońca</h5>
-                      <p class="card-text">armor, heal and mana regen buff<br><span class="self">self</span></p>
+                      <p class="card-text">armor, heal and mana regen buff<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -654,7 +655,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Porażająca tarcza</h5>
-                      <p class="card-text">shield<br><span class="self">self</span></p>
+                      <p class="card-text">shield<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -760,7 +761,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Grad strzał</h5>
-                      <p class="card-text">multiple dmg (?)</p>
+                      <p class="card-text">multiple dmg<br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
 
@@ -768,7 +769,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Kojące ochłodzenie</h5>
-                      <p class="card-text">heal<br><span class="self">self</span><br><span class="allies">allies</span></p>
+                      <p class="card-text">heal<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -776,7 +777,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Emanująca strzała</h5>
-                      <p class="card-text"><br><span class="self">self</span</p>
+                      <p class="card-text"><br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
 
@@ -784,7 +785,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Rytuał ochrony żywiołów</h5>
-                      <p class="card-text">resists buff<br><span class="self">self</span></p>
+                      <p class="card-text">resists buff<br><span class="allies">allies</span></p>
                     </div>
                   </div>
 
@@ -808,7 +809,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Gwałtowny strzał</h5>
-                      <p class="card-text">SA boost (?)</p>
+                      <p class="card-text">SA boost <br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
 
@@ -829,8 +830,10 @@
             <!-- END TROPICIEL -->
 
 
-            <!-- TABELA TANCERZ OSTRZY -->  
-          <div class="tab-pane fade" id="v-pills-tanc" role="tabpanel" aria-labelledby="v-pills-tanc-tab">
+            <!-- TABELA TANCERZ OSTRZY --> 
+            
+           <div class="tab-pane fade" id="v-pills-tanc" role="tabpanel" aria-labelledby="v-pills-tanc-tab">
+          
               
             <div class="card-group">
 
@@ -863,7 +866,7 @@
                   </div>
 
                   <div class="card">
-                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <img src="img/tanc/podstepne-uderzenie.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Podstępne uderzenie</h5>
                       <p class="card-text">deals x% of max hp<br><span class="enemy">enemy</span></p>
@@ -906,7 +909,7 @@
                     <img src="img/quma.gif" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Wirujące ostrze</h5>
-                      <p class="card-text">deals dmg to multiple enemies<br><span class="self">self</span></p>
+                      <p class="card-text">deals dmg to multiple enemies<br><span class="enemy">enemy</span></p>
                     </div>
                   </div>
 
@@ -950,6 +953,46 @@
           </div>
             <!-- END TANCERZ OSTRZY -->
 
+            <!-- TABELA OTHER -->
+            <div class="tab-pane fade" id="v-pills-other" role="tabpanel" aria-labelledby="v-pills-intro-tab">
+                <div class="card-group">
+
+                    <div class="card">
+                        <img src="img/na.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Skill name</h5>
+                          <p class="card-text">Dummy panel for reference
+                            <br><span class="self">self</span>
+                            <br><span class="enemy">enemy</span>
+                            <br><span class="allies">allies</span>
+                            <br><span class="fire">fire</span>
+                            <br><span class="lighting">lighting</span>
+                            <br><span class="ice">ice</span>
+                            <br><span class="poison">poison</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/blok.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Blok</h5>
+                          <p class="card-text">atrybut tarczy<br><span class="self">self</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/mag/kula-ognia.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kula ognia</h5>
+                          <p class="card-text">deals <span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                        </div>
+                      </div>
+    
+                  </div>
+            </div>
+            <!-- END OTHER -->
 
         </div>
       </div>
