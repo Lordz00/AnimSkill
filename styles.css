@@ -39,3 +39,19 @@ body {
 .allies {
     color: rgb(103, 255, 103);
 }
+
+.fire {
+    color: coral;
+}
+
+.ice {
+    color: rgb(78, 228, 255);
+}
+
+.lighting {
+    color: rgb(255, 238, 0);
+}
+
+.poison {
+    color: rgb(0, 165, 0);
+}
