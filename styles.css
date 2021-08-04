@@ -1,0 +1,41 @@
+body {
+    background-color: #141311;
+    color:#b7b7b6;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #336D4B !important;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: #686766 !important;
+}
+
+.card-img-top {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+
+.card-body {
+    background-color: #535250;
+    color: #b7b786;
+}
+
+.card {
+    background-color: #2e2d2c;
+    min-width: 192px;
+}
+
+.enemy {
+    color: red;
+}
+
+.self {
+    color: rgb(82, 112, 247);
+}
+
+.allies {
+    color: rgb(103, 255, 103);
+}
