@@ -56,7 +56,26 @@ body {
     color: rgb(0, 165, 0);
 }
 
-.testDisplayBg {
+.testDisplay {
 
-  background-image: url("/img/pokaz.png");
+  justify-self: center;
 }
+
+.testAnimEnemy {
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 132px;
+}
+
+.testAnimSelf {
+  position: absolute;
+  margin-top: 232px;
+  margin-left: 116px;
+}
+
+.testAnimAlly {
+  position: absolute;
+  margin-top: 232px;
+  margin-left: 209px;
+}
+
