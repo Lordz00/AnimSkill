@@ -55,3 +55,33 @@ body {
 .poison {
     color: rgb(0, 165, 0);
 }
+
+.testDisplay {
+
+  justify-self: center;
+}
+
+.testAnimEnemy {
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 132px;
+}
+
+.testAnimEnemyTwo {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 209px;
+  }
+
+.testAnimSelf {
+  position: absolute;
+  margin-top: 232px;
+  margin-left: 116px;
+}
+
+.testAnimAlly {
+  position: absolute;
+  margin-top: 232px;
+  margin-left: 209px;
+}
+
