@@ -55,3 +55,8 @@ body {
 .poison {
     color: rgb(0, 165, 0);
 }
+
+.testDisplayBg {
+
+  background-image: url("/img/pokaz.png");
+}
