@@ -67,6 +67,12 @@ body {
   margin-left: 132px;
 }
 
+.testAnimEnemyTwo {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 209px;
+  }
+
 .testAnimSelf {
   position: absolute;
   margin-top: 232px;

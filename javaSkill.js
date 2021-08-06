@@ -7,6 +7,20 @@
 
 // }
 
+// INNE
+
+function reset() {
+
+  document.getElementById("myImgEnemy").src="img/null.gif";
+  document.getElementById("myImgEnemyTwo").src="img/null.gif";
+  document.getElementById("myImgSelf").src="img/null.gif";
+  document.getElementById("myImgAlly").src="img/null.gif";
+
+
+
+}
+
+
 //WOJOWNIK
 function blyskAtak() {
 
@@ -114,6 +128,8 @@ function wynRan() {
 function deszczStrzal() {
 
   document.getElementById("myImgEnemy").src="img/low/deszcz-strzal.gif";
+  document.getElementById("myImgEnemyTwo").src="img/low/deszcz-strzal.gif";
+
 
 }
 
@@ -168,6 +184,8 @@ function fuzZyw() {
 function szadz() {
 
   document.getElementById("myImgEnemy").src="img/mag/szadz.gif";
+  document.getElementById("myImgEnemyTwo").src="img/mag/szadz.gif";
+
 
 }
 
@@ -183,7 +201,7 @@ function manaReg() {
 
 function fireAtt() {
 
-  document.getElementById("img/pal/gorace-uderzenie.gif").src="blank";
+  document.getElementById("myImgEnemy").src="img/pal/gorace-uderzenie.gif";
 
 }
 
@@ -252,6 +270,8 @@ function wycStrzal() {
 function gradStrzal() {
 
   document.getElementById("myImgEnemy").src="img/trop/grad-strzal.gif";
+  document.getElementById("myImgEnemyTwo").src="img/trop/grad-strzal.gif";
+
 
 }
 
