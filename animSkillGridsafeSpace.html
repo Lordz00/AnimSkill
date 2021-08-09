@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AnimSkill Grid</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+<script src="javaSkill.js"></script>
+
+</head>
+<body>
+
+<div class="container-xxl m-3 p-0">
+
+      <div class="d-flex align-items-start m-2 mr-3">
+        <div class="nav flex-column nav-pills m-3 p-4" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link active" id="v-pills-intro-tab" data-bs-toggle="pill" data-bs-target="#v-pills-intro" type="button" role="tab" aria-controls="v-pills-intro" aria-selected="true">Intro</button>
+          <button class="nav-link" id="v-pills-woj-tab" data-bs-toggle="pill" data-bs-target="#v-pills-woj" type="button" role="tab" aria-controls="v-pills-woj" aria-selected="false">Wojownik</button>
+          <button class="nav-link" id="v-pills-low-tab" data-bs-toggle="pill" data-bs-target="#v-pills-low" type="button" role="tab" aria-controls="v-pills-low" aria-selected="false">Łowca</button>
+          <button class="nav-link" id="v-pills-mag-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mag" type="button" role="tab" aria-controls="v-pills-mag" aria-selected="false">Mag</button>
+          <button class="nav-link" id="v-pills-pal-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pal" type="button" role="tab" aria-controls="v-pills-pal" aria-selected="false">Paladyn</button>
+          <button class="nav-link" id="v-pills-trop-tab" data-bs-toggle="pill" data-bs-target="#v-pills-trop" type="button" role="tab" aria-controls="v-pills-trop" aria-selected="false">Tropiciel</button>
+          <button class="nav-link" id="v-pills-tanc-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tanc" type="button" role="tab" aria-controls="v-pills-tanc" aria-selected="false">Tancerz ostrzy</button>
+          <button class="nav-link" id="v-pills-other-tab" data-bs-toggle="pill" data-bs-target="#v-pills-other" type="button" role="tab" aria-controls="v-pills-other" aria-selected="false">Pozostałe efekty</button>
+
+        </div>
+
+        <div class="container m-2 sticky-top">
+          <img class="testAnimEnemy" id="myImgEnemy" src="img/null.gif" alt="image">
+          <img class="testAnimEnemyTwo" id="myImgEnemyTwo" src="img/null.gif" alt="image">
+          <img class="testAnimSelf" id="myImgSelf" src="img/null.gif" alt="image">
+          <img class="testAnimAlly" id="myImgAlly" src="img/null.gif" alt="image">
+
+
+          <img src="img/pokaz.png">
+
+        </div>
+        <div class="tab-content ml-3 p-3" id="v-pills-tabContent">
+
+            <!-- TABELA INTRO -->
+            <div class="tab-pane fade show active" id="v-pills-intro" role="tabpanel" aria-labelledby="v-pills-intro-tab">
+                <div class="card-group">
+
+                    <div class="card">
+                        <img src="img/quma.gif" class="card-img-top" alt="...">
+                        <button class="btn btn-dark" onclick=reset()>Reset</button>
+                        <div class="card-body">
+                          <h5 class="card-title">Skill name</h5>
+                          <p class="card-text">Dummy panel for reference
+                            <br><span class="self">self</span>
+                            <br><span class="enemy">enemy</span>
+                            <br><span class="allies">allies</span>
+                            <br><span class="fire">fire</span>
+                            <br><span class="lighting">lighting</span>
+                            <br><span class="ice">ice</span>
+                            <br><span class="poison">poison</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/quma.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Nazwa umiejętności</h5>
+                          <p class="card-text">Opis działania
+                            <br><span class="self">wyświetla na postaci gracza</span>
+                            <br><span class="enemy">wyświetla na przeciwnikach</span>
+                            <br><span class="allies">wyświetla na sojusznikach</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/mag/kula-ognia.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kula ognia</h5>
+                          <p class="card-text">deals <span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                        </div>
+                      </div>
+    
+                  </div>
+            </div>
+            <!-- END INTRO -->
+
+
+            <!-- TABELA WOJOWNIK -->
+          <div class="tab-pane fade" id="v-pills-woj" role="tabpanel" aria-labelledby="v-pills-woj-tab">
+
+            <div class="card-group">
+
+                <div class="card">
+                  <img src="img/na.gif" class="card-img-top" alt="...">
+                  <button class="btn btn-dark" onclick=reset()>Reset</button>
+                  <div class="card-body">
+                    <h5 class="card-title">Skillname</h5>
+                    <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                   </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/woj/blyskawiczny-atak.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=blyskAtak()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Błyskawiczny atak</h5>
+                      <p class="card-text">dodaje SA<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/niszczycielskiCios.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=niszCios()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Niszczycielski cios</h5>
+                      <p class="card-text">niszczy pancerz<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/atak-zza-tarczy.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=attTar()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Uderzenie zza tarczy</h5>
+                      <p class="card-text">zadaje x% życia przeciwnika<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/ogluszenie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=oglusz()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Ogłuszający cios</h5>
+                      <p class="card-text">stun<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/taunt.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=taunt()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Wyzywający okrzyk</h5>
+                      <p class="card-text">taunt<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/oslona-tarcza.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=oslTar()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Osłona tarczą</h5>
+                      <p class="card-text">armor boost tarczy<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/krwiozerczy-szal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=krwioSzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Krwiożerczy szał </h5>
+                      <p class="card-text">lifesteal<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/agresywny-atak.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=agrAtt()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Agresywny atak</h5>
+                      <p class="card-text">dmg boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/woj/szarza.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=szarza()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Szarża</h5>
+                      <p class="card-text">SA boost<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kamienna skóra</h5>
+                      <p class="card-text">armor % resistance boost<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/univ/energyRegen.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=eneRegen()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Przemożenie zmęczenia</h5>
+                      <p class="card-text">energy restoration<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Paraliżujący cios</h5>
+                      <p class="card-text">debuff, lower crit rate & dmg<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Wampiryzm</h5>
+                      <p class="card-text">lifesteal attack<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Okrzyk bojowy</h5>
+                      <p class="card-text">crit boost<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <!-- END OF CARD GROUP -->
+              </div>
+
+          </div>
+            <!-- END WOJOWNIK -->
+
+            <!-- TABELA ŁOWCA -->
+          <div class="tab-pane fade" id="v-pills-low" role="tabpanel" aria-labelledby="v-pills-low-tab">
+              
+            <div class="card-group">
+
+                <div class="card">
+                    <img src="img/na.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=reset()>Reset</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Skillname</h5>
+                      <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/low/blyskawiczny-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=blyskStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Błyskawiczny strzał</h5>
+                      <p class="card-text">SA boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/low/podwojny-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=podwStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Podwójny strzał</h5>
+                      <p class="card-text">double attack<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/low/zatruta-strzala.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=zatStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Zatruta strzała</h5>
+                      <p class="card-text"><span class="poison">poison</span> boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/low/wyniszczajce-rany.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=wynRan()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Wyniszczające rany</h5>
+                      <p class="card-text">deals x% of max life//poprawić bo sugeruje atak x3<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Piętno bestii</h5>
+                      <p class="card-text">marks for dmg boost<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/low/deszcz-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=deszczStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Deszcz strzał</h5>
+                      <p class="card-text">multiple shots fired<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/heal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=heal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Bandażowanie ran</h5>
+                      <p class="card-text">self-heal<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Krytyczne wzmocnienie</h5>
+                      <p class="card-text">crit buff<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Diamentowa strzała</h5>
+                      <p class="card-text">dmg boost<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/univ/restorationGreen.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=restoGreen()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Oczyszczenie</h5>
+                      <p class="card-text">removes debuffs<br><span class="allies">allies</span></p>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Lekki naciąg</h5>
+                      <p class="card-text">lower dmg but energy restoration<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Rozpraszająca strzała</h5>
+                      <p class="card-text">lower crit debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Strzał w stopę</h5>
+                      <p class="card-text">dmg boost<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Zdradziecki grot</h5>
+                      <p class="card-text">destroys mana/energy<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/univ/saBoost2.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=saBoost()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Dziki zapał</h5>
+                      <p class="card-text">SA boost<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+
+                  <!-- END CARD GROUP -->
+              </div>
+
+
+          </div>
+            <!-- END ŁOWCA -->
+
+            <!-- TABELA MAG -->  
+          <div class="tab-pane fade" id="v-pills-mag" role="tabpanel" aria-labelledby="v-pills-mag-tab">
+              
+            <div class="card-group">
+
+                <div class="card">
+                    <img src="img/na.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=reset()>Reset</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Skillname</h5>
+                      <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/mag/kula-ognia.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=fireBall()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Kula ognia</h5>
+                      <p class="card-text"><span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/mag/porazenie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=porazenie()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Porażenie</h5>
+                      <p class="card-text"><span class="lighting">lighting</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+                  
+                <div class="card">
+                    <img src="img/mag/lodowy-pocisk.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=lodPoc()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Lodowy pocisk</h5>
+                      <p class="card-text"><span class="ice">ice</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/mag/fuzja-zywiolow.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=fuzZyw()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Fuzja żywiołów</h5>
+                      <p class="card-text">deals x% of max hp<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/mag/szadz.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=szadz()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Szadź</h5>
+                      <p class="card-text">slow debuff<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ściana ognia</h5>
+                      <p class="card-text"><span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Łańcuch piorunów</h5>
+                      <p class="card-text"><span class="lighting">lighting</span> dmg<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Leczenie ran</h5>
+                      <p class="card-text">heal<br><span class="self">self</span><br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Zdrowa atmosfera</h5>
+                      <p class="card-text">heals allies<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/univ/manaRegen.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=manaReg()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Chwila skupienia</h5>
+                      <p class="card-text">mana restoration<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Duszący pocisk</h5>
+                      <p class="card-text">dmg debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Krytyczna potęga</h5>
+                      <p class="card-text">crit buff<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarcza odporności</h5>
+                      <p class="card-text">restist buff<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Magiczna bariera</h5>
+                      <p class="card-text">shield<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Śmierdzący pocisk</h5>
+                      <p class="card-text">debuffs<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Klątwa</h5>
+                      <p class="card-text">attacks apply debuff or sth<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Wewnętrzny spokój</h5>
+                      <p class="card-text">immune to dmg<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+
+
+                  <!-- END CARD GROUP -->
+              </div>
+
+
+          </div>
+            <!-- END MAG -->
+
+            <!-- TABELA PALADYN -->  
+          <div class="tab-pane fade" id="v-pills-pal" role="tabpanel" aria-labelledby="v-pills-pal-tab">
+              
+            <div class="card-group">
+
+                <div class="card">
+                    <img src="img/na.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=reset()>Reset</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Skillname</h5>
+                      <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/pal/gorace-uderzenie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=fireAtt()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Gorące uderzenie</h5>
+                      <p class="card-text"><span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/pal/porazajacy-cios.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=lightStrike()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Porażający cios</h5>
+                      <p class="card-text"><span class="lighting">lighting</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/pal/pchniecie-mrozu.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=iceStrike()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Pchnięcie mrozu</h5>
+                      <p class="card-text"><span class="ice">ice</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/pal/gniew-bogow.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=gniewBog()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Gniew bogów</h5>
+                      <p class="card-text">deals x% of max hp<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/pal/blyskawiczny-atak.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=blyskAtak()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Szybki atak</h5>
+                      <p class="card-text">SA boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/univ/saBoost2.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=saBoost()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Aura szybkości</h5>
+                      <p class="card-text">SA boost<br><span class="allies">allies</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/taunt.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=taunt()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Prowokujący okrzyk</h5>
+                      <p class="card-text">taunt<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Uderzenie tarczą</h5>
+                      <p class="card-text">dmg debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Srebrzysty blask</h5>
+                      <p class="card-text">heal<br><span class="self">self</span><br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/univ/manaRegen.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=manaReg()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Odnowa mocy</h5>
+                      <p class="card-text">mana restoration<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Fala leczenia</h5>
+                      <p class="card-text">heals<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tarcza słońca</h5>
+                      <p class="card-text">armor, heal and mana regen buff<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Rozpraszający cios</h5>
+                      <p class="card-text">crit debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Aura ochrony</h5>
+                      <p class="card-text">armor & resists buff<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Porażająca tarcza</h5>
+                      <p class="card-text">shield<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Błogosławieństwo mieczy</h5>
+                      <p class="card-text">dmg boost<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Kula światłości</h5>
+                      <p class="card-text">dmg & mana steal<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+
+
+                  
+                  <!-- END CARD GROUP -->
+              </div>
+
+          </div>
+            <!-- END PALADYN -->
+
+            <!-- TABELA TROPICIEL -->  
+          <div class="tab-pane fade" id="v-pills-trop" role="tabpanel" aria-labelledby="v-pills-trop-tab">
+              
+            <div class="card-group">
+
+                <div class="card">
+                    <img src="img/na.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=reset()>Reset</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Skillname</h5>
+                      <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/trop/plonaca-strzala.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=ploStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Płonąca strzała</h5>
+                      <p class="card-text"><span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/trop/porazajaca-strzala.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=porStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Porażająca strzała</h5>
+                      <p class="card-text"><span class="lighting">lighting</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/trop/lodowa-strzala.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=lodStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Lodowa strzała</h5>
+                      <p class="card-text"><span class="ice">ice</span> dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/trop/podwojny-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=podwStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Podwójne trafienie</h5>
+                      <p class="card-text">double attack<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/trop/strzala-z-niespodzianka.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=supStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Strzała z niespodzianką</h5>
+                      <p class="card-text">dmg debuff<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/trop/wycienczajaca-strzala.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=wycStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Wycieńczająca strzała</h5>
+                      <p class="card-text">deals x% of max hp<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/univ/saBoost2.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=saBoost()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Podwójny dech</h5>
+                      <p class="card-text">SA boost<br><span class="allies">allies</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/trop/grad-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=gradStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Grad strzał</h5>
+                      <p class="card-text">multiple dmg<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/heal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=heal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Kojące ochłodzenie</h5>
+                      <p class="card-text">heal<br><span class="allies">allies</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Emanująca strzała</h5>
+                      <p class="card-text"><br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Rytuał ochrony żywiołów</h5>
+                      <p class="card-text">resists buff<br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Śmierdzący ładunek</h5>
+                      <p class="card-text">dmg debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/univ/manaRegen.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=manaReg()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Przywracanie mocy</h5>
+                      <p class="card-text">mana restoration<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/low/blyskawiczny-strzal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=blyskStrzal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Gwałtowny strzał</h5>
+                      <p class="card-text">SA boost <br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Mistyczny strzał</h5>
+                      <p class="card-text">mana steal<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+                  
+
+                  <!-- END CARD GROUP -->
+              </div>
+
+
+          </div>
+            <!-- END TROPICIEL -->
+
+
+            <!-- TABELA TANCERZ OSTRZY --> 
+            
+           <div class="tab-pane fade" id="v-pills-tanc" role="tabpanel" aria-labelledby="v-pills-tanc-tab">
+          
+              
+            <div class="card-group">
+
+                <div class="card">
+                    <img src="img/na.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=reset()>Reset</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Skillname</h5>
+                      <p class="card-text">Dummy panel for reference
+                        <br><span class="self">self</span>
+                        <br><span class="enemy">enemy</span>
+                        <br><span class="allies">allies</span>
+                      </p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/tanc/blyskawiczny-atak.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=blyskAtak()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Błyskawiczny cios</h5>
+                      <p class="card-text">SA boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/tanc/trujace-pchniecie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=truPchn()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Trujące pchnięcie</h5>
+                      <p class="card-text"><span class="poison">poison</span> boost<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/tanc/podstepne-uderzenie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=podUd()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Podstępne uderzenie</h5>
+                      <p class="card-text">deals x% of max hp<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/tanc/rozpraszajacy-atak.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=rozpAta()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Rozpraszający atak</h5>
+                      <p class="card-text">crit debuff<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/tanc/rozjuszenie.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=rozjusz()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Rozjuszenie</h5>
+                      <p class="card-text">dmg debuff<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/tanc/niszczycielskiCios.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=niszCios()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Zadziorny atak</h5>
+                      <p class="card-text">destroys armor<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Jadowity podmuch</h5>
+                      <p class="card-text">heal debuff<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Wirujące ostrze</h5>
+                      <p class="card-text">deals dmg to multiple enemies<br><span class="enemy">enemy</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Furia</h5>
+                      <p class="card-text">crit boost<br><span class="self">self</span><br><span class="allies">allies</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+                <div class="card">
+                    <img src="img/heal.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=heal()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Opatrywanie ran</h5>
+                      <p class="card-text">self-heal<br><span class="self">self</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/univ/debuffRed.gif" class="card-img-top" alt="...">
+                    <button class="btn btn-dark" onclick=debuffRed()>Testuj</button>
+                    <div class="card-body">
+                      <h5 class="card-title">Zamroczenie</h5>
+                      <p class="card-text">energy debuff<br><span class="enemy">enemy</span></p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img src="img/quma.gif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Amok</h5>
+                      <p class="card-text">lifesteal<br><span class="self">self</span></p>
+                      <!-- <button class="btn btn-dark" onclick=()>Testuj</button> -->
+                    </div>
+                  </div>
+
+
+                  <!-- END CARD GROUP -->
+              </div>
+
+
+          </div>
+            <!-- END TANCERZ OSTRZY -->
+
+            <!-- TABELA OTHER -->
+            <div class="tab-pane fade" id="v-pills-other" role="tabpanel" aria-labelledby="v-pills-intro-tab">
+                <div class="card-group">
+
+                    <div class="card">
+                        <img src="img/na.gif" class="card-img-top" alt="...">
+                        <button class="btn btn-dark" onclick=reset()>Reset</button>
+                        <div class="card-body">
+                          <h5 class="card-title">Skill name</h5>
+                          <p class="card-text">Dummy panel for reference
+                            <br><span class="self">self</span>
+                            <br><span class="enemy">enemy</span>
+                            <br><span class="allies">allies</span>
+                            <br><span class="fire">fire</span>
+                            <br><span class="lighting">lighting</span>
+                            <br><span class="ice">ice</span>
+                            <br><span class="poison">poison</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/blok.gif" class="card-img-top" alt="...">
+                        <button class="btn btn-dark" onclick=blok()>Testuj</button>
+                        <div class="card-body">
+                          <h5 class="card-title">Blok</h5>
+                          <p class="card-text">atrybut tarczy<br><span class="self">self</span>
+                          </p>
+                        </div>
+                      </div>
+    
+                      <div class="card">
+                        <img src="img/mag/kula-ognia.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kula ognia</h5>
+                          <p class="card-text">deals <span class="fire">fire</span> dmg<br><span class="enemy">enemy</span></p>
+                        </div>
+                      </div>
+    
+                  </div>
+            </div>
+            <!-- END OTHER -->
+
+        </div>
+      </div>
+
+
+    
+</div>
+<!-- 
+<button onclick='edit()'>test</button>
+
+
+<script>
+
+function edit() {
+
+  document.getElementById("myImgSelf").src="img/quma.gif";
+
+}
+
+</script> -->
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
