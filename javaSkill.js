@@ -83,9 +83,9 @@ function eneRegen() {
 
 }
 
-function blank() {
+function kamSkor() {
 
-  document.getElementById("myImgEnemy").src="blank";
+  document.getElementById("myImgAlly").src="img/woj/kamienna-skora.gif";
 
 }
 
