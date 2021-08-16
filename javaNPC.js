@@ -265,7 +265,7 @@ function bgbNone() {
   
   }
 
-
+//A
 function bgbA1() {
 
     document.getElementById("testBubble").src="imgNPC/b-bg/bbg-A1.gif";
@@ -301,7 +301,259 @@ function bgbA5() {
   
   }
 
+//B
+  function bgbB1() {
 
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-B1.gif";
+  
+  }
+
+  
+function bgbB2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-B2.gif";
+  
+  }
+
+
+  
+function bgbB3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-B3.gif";
+  
+  }
+
+  
+function bgbB4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-B4.gif";
+  
+  }
+
+  
+function bgbB5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-B5.gif";
+  
+  }
+
+//C
+function bgbC1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-C1.gif";
+  
+  }
+
+  
+function bgbC2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-C2.gif";
+  
+  }
+
+
+  
+function bgbC3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-C3.gif";
+  
+  }
+
+  
+function bgbC4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-C4.gif";
+  
+  }
+
+  
+function bgbC5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-C5.gif";
+  
+  }
+
+  //D
+  function bgbD1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-D1.gif";
+  
+  }
+
+  
+function bgbD2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-D2.gif";
+  
+  }
+
+
+  
+function bgbD3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-D3.gif";
+  
+  }
+
+  
+function bgbD4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-D4.gif";
+  
+  }
+
+  
+function bgbD5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-D5.gif";
+  
+  }
+
+  //E
+  function bgbE1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-E1.gif";
+  
+  }
+
+  
+function bgbE2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-E2.gif";
+  
+  }
+
+
+  
+function bgbE3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-E3.gif";
+  
+  }
+
+  
+function bgbE4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-E4.gif";
+  
+  }
+
+  
+function bgbE5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-E5.gif";
+  
+  }
+
+  //F
+  function bgbF1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-F1.gif";
+  
+  }
+
+  
+function bgbF2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-F2.gif";
+  
+  }
+
+
+  
+function bgbF3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-F3.gif";
+  
+  }
+
+  
+function bgbF4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-F4.gif";
+  
+  }
+
+  
+function bgbF5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-F5.gif";
+  
+  }
+
+  //G
+  function bgbG1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-G1.gif";
+  
+  }
+
+  
+function bgbG2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-G2.gif";
+  
+  }
+
+
+  
+function bgbG3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-G3.gif";
+  
+  }
+
+  
+function bgbG4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-G4.gif";
+  
+  }
+
+  
+function bgbG5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-G5.gif";
+  
+  }
+
+  //H
+  function bgbH1() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-H1.gif";
+  
+  }
+
+  
+function bgbH2() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-H2.gif";
+  
+  }
+
+
+  
+function bgbH3() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-H3.gif";
+  
+  }
+
+  
+function bgbH4() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-H4.gif";
+  
+  }
+
+  
+function bgbH5() {
+
+    document.getElementById("testBubble").src="imgNPC/b-bg/bbg-H5.gif";
+  
+  }
+
+  
 
   
 //   function () {
@@ -325,3 +577,12 @@ function bgbA5() {
 //     document.getElementById("testBg").src="imgNPC";
   
 //   }
+
+var i = 0;
+
+function buttonClick() {
+    document.getElementById('inc').value = ++i;
+    document.getElementById('icon').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubble').src = "imgNPC/icons/ico" + i + ".png";
+
+}
