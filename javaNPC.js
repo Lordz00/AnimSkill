@@ -580,6 +580,7 @@ function bgbH5() {
 
 var i = 0;
 
+
 function btnPrev() {
     if(i > 0) {
     document.getElementById('inc').value = --i;
@@ -601,3 +602,9 @@ function btnNext() {
 
 }
 
+function myFunction() {
+    var i = document.getElementById("inc").value;
+    document.getElementById('icon').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubble').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubblePrev').src = "imgNPC/icons/ico" + i + ".png";
+  }

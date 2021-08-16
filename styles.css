@@ -125,7 +125,10 @@ body {
 }
 
 .input {
-    visibility: hidden;
+    /* visibility: hidden; */
+    background-color: rgb(110, 109, 109);
+    border: 1px solid #262727;
+
 }
   .npcDummy {
       position: absolute;
@@ -154,6 +157,7 @@ body {
     height: 48px;
     width: auto;
 }
+
 
   .toolTip {
     visibility: hidden;
