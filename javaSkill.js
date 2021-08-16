@@ -36,7 +36,7 @@ function niszCios() {
 
 function attTar() {
 
-  document.getElementById("myImgEnemy").src="img/woj/atak-zza-tarczy.gif";
+  document.getElementById("myImgEnemy").src="img/woj/zdruzgotanie.gif";
 
 }
 
