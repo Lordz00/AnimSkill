@@ -580,9 +580,24 @@ function bgbH5() {
 
 var i = 0;
 
-function buttonClick() {
+function btnPrev() {
+    if(i > 0) {
+    document.getElementById('inc').value = --i;
+    document.getElementById('icon').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubble').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubblePrev').src = "imgNPC/icons/ico" + i + ".png";
+}
+else {}
+}
+
+function btnNext() {
+    if(i < 77) {
     document.getElementById('inc').value = ++i;
     document.getElementById('icon').src = "imgNPC/icons/ico" + i + ".png";
     document.getElementById('fillBubble').src = "imgNPC/icons/ico" + i + ".png";
+    document.getElementById('fillBubblePrev').src = "imgNPC/icons/ico" + i + ".png";
+    }
+    else {}
 
 }
+
