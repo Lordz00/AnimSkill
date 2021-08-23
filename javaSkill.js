@@ -89,11 +89,32 @@ function kamSkor() {
 
 }
 
+function parCio() {
+
+  document.getElementById("myImgEnemy").src="img/woj/paralizujacy-cios.gif";
+
+}
+
+function wamp() {
+
+  document.getElementById("myImgEnemy").src="img/woj/wampiryzm.gif";
+
+}
+
+
+function okrzBoj() {
+
+  document.getElementById("myImgSelf").src="img/woj/okrzyk-bojowy.gif";
+
+}
+
+
 function blank() {
 
   document.getElementById("myImgEnemy").src="blank";
 
 }
+
 
 
 
