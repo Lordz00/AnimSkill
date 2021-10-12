@@ -172,6 +172,27 @@ body {
     margin-left: 70px;
 }
 
+.widget {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 4px;
+  max-width: 26px;
+}
+
+
+.widgetColor {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  max-width: 24px;
+  overflow: auto;
+  fill: #fff;
+}
+
+.widgetColor:hover {
+  fill: salmon;
+}
+
 /* .npcName {
     font-family: 'aleo';
     position: absolute;
