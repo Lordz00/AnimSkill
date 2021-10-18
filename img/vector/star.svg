@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="star.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74118967"
+     inkscape:cx="298.84388"
+     inkscape:cy="495.8245"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <filter
+       inkscape:label="In and Out"
+       inkscape:menu="Shadows and Glows"
+       inkscape:menu-tooltip="Inner colorized shadow, outer black shadow"
+       style="color-interpolation-filters:sRGB;"
+       id="filter229"
+       x="-0.012212622"
+       y="-0.012626109"
+       width="1.030786"
+       height="1.0318283">
+      <feGaussianBlur
+         result="result0"
+         in="SourceAlpha"
+         stdDeviation="4"
+         id="feGaussianBlur223" />
+      <feOffset
+         dx="5"
+         dy="5"
+         result="result4"
+         id="feOffset225" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result4"
+         operator="xor"
+         result="result3"
+         id="feComposite227" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#999999;fill-rule:evenodd;filter:url(#filter229)"
+       id="path31"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="373.72351"
+       sodipodi:cy="496.49908"
+       sodipodi:r1="413.82965"
+       sodipodi:r2="182.08505"
+       sodipodi:arg1="2.8797933"
+       sodipodi:arg2="3.5081118"
+       inkscape:rounded="3.1225023e-17"
+       inkscape:randomized="0"
+       d="M -26.00524,603.60607 203.73247,431.24564 148.33574,149.43233 383.25311,314.66357 634.15496,174.89305 549.60417,449.37201 760.06677,644.80238 472.89414,649.20846 352.06533,909.7616 259.13367,638.00575 Z"
+       transform="matrix(-0.26458333,0,0,-0.26458333,203.39172,280.77792)"
+       inkscape:transform-center-x="-1.7707873"
+       inkscape:transform-center-y="-8.7571495" />
+  </g>
+</svg>

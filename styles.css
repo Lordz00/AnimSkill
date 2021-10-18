@@ -186,12 +186,35 @@ body {
   margin-left: 5px;
   max-width: 24px;
   overflow: auto;
-  fill: #fff;
+  /* fill: black; */
+  fill: radial-gradient(black, #fff);
+  filter: drop-shadow(0px 0px 4px #fff);
+  stroke: blueviolet;
 }
 
 .widgetColor:hover {
-  fill: salmon;
+  fill: #fff;
+  filter: drop-shadow(0px 0px 4px black);
+
 }
+/* NOTES FOR SVG icons */
+
+/* 
+filter: drop-shadow - cień
+stroke: - dodaje fajny lineart
+fill - koloruje
+
+
+*/
+
+
+
+
+
+
+
+
+
 
 /* .npcName {
     font-family: 'aleo';
