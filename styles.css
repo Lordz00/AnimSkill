@@ -187,9 +187,10 @@ body {
   max-width: 24px;
   overflow: auto;
   /* fill: black; */
-  fill: radial-gradient(black, #fff);
-  filter: drop-shadow(0px 0px 4px #fff);
-  stroke: blueviolet;
+  /* fill: radial-gradient(black, #fff); */
+  fill: url(#MyGradient);
+  filter: drop-shadow(0px 0px 4px black);
+  stroke: black;
 }
 
 .widgetColor:hover {
@@ -203,6 +204,14 @@ body {
 filter: drop-shadow - cień
 stroke: - dodaje fajny lineart
 fill - koloruje
+GRADIENT: 
+fill: url(#gradientID)
+
+in <svg>
+  <gradient>
+  GRADIENT IN USE: https://www.w3schools.com/graphics/svg_grad_linear.asp
+  </gradient>
+</svg>
 
 
 */
