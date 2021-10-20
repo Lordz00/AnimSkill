@@ -198,6 +198,46 @@ body {
   filter: drop-shadow(0px 0px 4px black);
 
 }
+
+
+.widgetNew {
+  position: absolute;
+  margin-top: auto;
+  margin-left: -1px;
+  max-width: 36px;
+  height: auto;
+  overflow: auto;
+  fill:#999999;
+  filter: drop-shadow(0px 0px 4px black);
+  stroke: black;
+  stroke: width 0.2em;
+}
+
+.widgetNew:hover {
+  fill: #fff;
+  filter: drop-shadow(0px 0px 4px black);
+}
+
+
+
+.widgetNewGrad {
+  position: absolute;
+  margin-top: auto;
+  margin-left: -1px;
+  max-width: 36px;
+  height: auto;
+  overflow: auto;
+  fill: url(#widgetGradient) !important;
+  filter: drop-shadow(0px 0px 4px black);
+  stroke: black;
+}
+
+.widgetNewGrad:hover {
+  fill: url(#widgetGradientHover) !important;
+  filter: drop-shadow(0px 0px 4px black);
+}
+
+
 /* NOTES FOR SVG icons */
 
 /* 
@@ -213,6 +253,12 @@ in <svg>
   </gradient>
 </svg>
 
+
+żeby działał CSS trzeba wywalić styl z svg
+
+CO DALEJ:
+trzeba ustawić w INKSCAPE export do kwadratu a nie na canvas A4 - wywala się
+trzeba znaleźć jak 
 
 */
 
