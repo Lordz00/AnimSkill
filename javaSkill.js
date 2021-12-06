@@ -9,6 +9,13 @@
 
 // INNE
 
+const enemy = document.querySelector('#myImgEnemy')
+const enemyTwo = document.querySelector('#myImgEnemyTwo')
+const self = document.querySelector('#myImgSelf')
+const ally = document.querySelector('#myImgAlly')
+
+
+
 function reset() {
 
   document.getElementById("myImgEnemy").src="img/null.gif";
