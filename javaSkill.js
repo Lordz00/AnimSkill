@@ -14,18 +14,27 @@ const enemyTwo = document.querySelector('#myImgEnemyTwo')
 const self = document.querySelector('#myImgSelf')
 const ally = document.querySelector('#myImgAlly')
 
-
-
-function reset() {
-
-  document.getElementById("myImgEnemy").src="img/null.gif";
-  document.getElementById("myImgEnemyTwo").src="img/null.gif";
-  document.getElementById("myImgSelf").src="img/null.gif";
-  document.getElementById("myImgAlly").src="img/null.gif";
-
-
-
+const change = (el, source) => {
+  el.src = source
 }
+
+const reset = () => {
+  change(enemy, "img/null.gif")
+  change(document.querySelector('#myImgEnemyTwo'), "img/null.gif")
+  change(document.querySelector('#myImgSelf'), "img/null.gif")
+  change(document.querySelector('#myImgAlly'), "img/null.gif")
+}
+
+// function reset() {
+
+//   document.getElementById("myImgEnemy").src="img/null.gif";
+//   document.getElementById("myImgEnemyTwo").src="img/null.gif";
+//   document.getElementById("myImgSelf").src="img/null.gif";
+//   document.getElementById("myImgAlly").src="img/null.gif";
+
+
+
+// }
 
 
 //WOJOWNIK
