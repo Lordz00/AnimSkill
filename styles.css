@@ -218,7 +218,42 @@ body {
   filter: drop-shadow(0px 0px 4px black);
 }
 
+.skullNew {
+  position: absolute;
+  margin: -8px;
+  /* margin-top: auto; */
+  margin-left: 0px;
+  max-width: 36px;
+  height: auto;
+  /* overflow: auto; */
+  fill: url(#widgetGradient) !important;
+  filter: drop-shadow(0px 0px 4px black);
+  stroke: black;
+}
 
+#light {
+  fill:#999999 !important;
+  transition: 300ms;
+
+}
+
+#light:hover {
+
+  fill: #fff !important;  
+  filter:  drop-shadow(1px 1px 4px black);
+  transition: 1200ms;
+}
+#dark {
+  fill:#292828 !important;
+  transition: 300ms;
+
+}
+
+/* #dark:hover {
+  fill: :#999999 !important;  
+  filter: drop-shadow(1px 1px 4px black);
+  transition: 1200ms;
+} */
 
 .widgetNewGrad {
   position: absolute;
