@@ -9,17 +9,17 @@
 
 // INNE
 
-const enemy = document.querySelector('#myImgEnemy')
-const enemyTwo = document.querySelector('#myImgEnemyTwo')
-const self = document.querySelector('#myImgSelf')
-const ally = document.querySelector('#myImgAlly')
+// const enemy = document.querySelector('#myImgEnemy')
+// const enemyTwo = document.querySelector('#myImgEnemyTwo')
+// const self = document.querySelector('#myImgSelf')
+// const ally = document.querySelector('#myImgAlly')
 
 const change = (el, source) => {
   el.src = source
 }
 
 const reset = () => {
-  change(enemy, "img/null.gif")
+  change(document.querySelector('#myImgEnemy'), "img/null.gif")
   change(document.querySelector('#myImgEnemyTwo'), "img/null.gif")
   change(document.querySelector('#myImgSelf'), "img/null.gif")
   change(document.querySelector('#myImgAlly'), "img/null.gif")
@@ -162,11 +162,36 @@ function wynRan() {
 
 }
 
+
+function lekkiNac() {
+
+  document.getElementById("myImgEnemy").src="img/low/lekki-naciag.gif";
+
+}
+
+function strzalStopa() {
+
+  document.getElementById("myImgEnemy").src="img/low/strzal-stopa.gif";
+
+}
+
+function zdraGrot() {
+
+  document.getElementById("myImgEnemy").src="img/low/zdradziecki-grot.gif";
+
+}
+
+
 function deszczStrzal() {
 
   document.getElementById("myImgEnemy").src="img/low/deszcz-strzal.gif";
   document.getElementById("myImgEnemyTwo").src="img/low/deszcz-strzal.gif";
 
+
+}
+
+const mark = () => {
+  document.getElementById("myImgEnemy").src="img/low/markBeast.gif";
 
 }
 
@@ -222,6 +247,13 @@ function szadz() {
 
   document.getElementById("myImgEnemy").src="img/mag/szadz.gif";
   document.getElementById("myImgEnemyTwo").src="img/mag/szadz.gif";
+
+
+}
+function fireWall() {
+
+  document.getElementById("myImgEnemy").src="img/mag/fireWall.gif";
+  document.getElementById("myImgEnemyTwo").src="img/mag/fireWall.gif";
 
 
 }
@@ -333,7 +365,8 @@ function podUd() {
 
 function rozpAta() {
 
-  document.getElementById("myImgEnemy").src="img/tanc/rozpraszajacy-atak.gif";
+  // document.getElementById("myImgEnemy").src="img/tanc/rozpraszajacy-atak.gif";
+  document.getElementById("myImgEnemy").src="img/stun.gif";
 
 }
 
