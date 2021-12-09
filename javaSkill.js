@@ -231,6 +231,13 @@ function porazenie() {
 
 }
 
+function lanPior() {
+
+  document.getElementById("myImgEnemy").src="img/mag/porazenie.gif";
+  document.getElementById("myImgEnemyTwo").src="img/mag/porazenie.gif";
+
+}
+
 function lodPoc() {
 
   document.getElementById("myImgEnemy").src="img/mag/lodowy-pocisk.gif";
