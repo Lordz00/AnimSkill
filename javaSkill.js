@@ -231,6 +231,18 @@ function porazenie() {
 
 }
 
+function toxicBullet() {
+
+  document.getElementById("myImgEnemy").src="img/mag/toxicBullet.gif";
+
+}
+
+function smokeBullet() {
+
+  document.getElementById("myImgEnemy").src="img/mag/smokeBullet.gif";
+
+}
+
 function lanPior() {
 
   document.getElementById("myImgEnemy").src="img/mag/porazenie.gif";
