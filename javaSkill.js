@@ -262,6 +262,7 @@ function fuzZyw() {
 
 }
 
+
 function szadz() {
 
   document.getElementById("myImgEnemy").src="img/mag/szadz.gif";
@@ -352,6 +353,12 @@ function supStrzal() {
 function wycStrzal() {
 
   document.getElementById("myImgEnemy").src="img/trop/wycienczajaca-strzala.gif";
+
+}
+function rytZyw() {
+
+  document.getElementById("myImgSelf").src="img/trop/rytual-ochrony.gif";
+  document.getElementById("myImgAlly").src="img/trop/rytual-ochrony.gif";
 
 }
 
