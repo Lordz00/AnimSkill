@@ -9,16 +9,32 @@
 
 // INNE
 
-function reset() {
+// const enemy = document.querySelector('#myImgEnemy')
+// const enemyTwo = document.querySelector('#myImgEnemyTwo')
+// const self = document.querySelector('#myImgSelf')
+// const ally = document.querySelector('#myImgAlly')
 
-  document.getElementById("myImgEnemy").src="img/null.gif";
-  document.getElementById("myImgEnemyTwo").src="img/null.gif";
-  document.getElementById("myImgSelf").src="img/null.gif";
-  document.getElementById("myImgAlly").src="img/null.gif";
-
-
-
+const change = (el, source) => {
+  el.src = source
 }
+
+const reset = () => {
+  change(document.querySelector('#myImgEnemy'), "img/null.gif")
+  change(document.querySelector('#myImgEnemyTwo'), "img/null.gif")
+  change(document.querySelector('#myImgSelf'), "img/null.gif")
+  change(document.querySelector('#myImgAlly'), "img/null.gif")
+}
+
+// function reset() {
+
+//   document.getElementById("myImgEnemy").src="img/null.gif";
+//   document.getElementById("myImgEnemyTwo").src="img/null.gif";
+//   document.getElementById("myImgSelf").src="img/null.gif";
+//   document.getElementById("myImgAlly").src="img/null.gif";
+
+
+
+// }
 
 
 //WOJOWNIK
@@ -154,11 +170,36 @@ function wynRan() {
 
 }
 
+
+function lekkiNac() {
+
+  document.getElementById("myImgEnemy").src="img/low/lekki-naciag.gif";
+
+}
+
+function strzalStopa() {
+
+  document.getElementById("myImgEnemy").src="img/low/strzal-stopa.gif";
+
+}
+
+function zdraGrot() {
+
+  document.getElementById("myImgEnemy").src="img/low/zdradziecki-grot.gif";
+
+}
+
+
 function deszczStrzal() {
 
   document.getElementById("myImgEnemy").src="img/low/deszcz-strzal.gif";
   document.getElementById("myImgEnemyTwo").src="img/low/deszcz-strzal.gif";
 
+
+}
+
+const mark = () => {
+  document.getElementById("myImgEnemy").src="img/low/markBeast.gif";
 
 }
 
@@ -198,6 +239,25 @@ function porazenie() {
 
 }
 
+function toxicBullet() {
+
+  document.getElementById("myImgEnemy").src="img/mag/toxicBullet.gif";
+
+}
+
+function smokeBullet() {
+
+  document.getElementById("myImgEnemy").src="img/mag/smokeBullet.gif";
+
+}
+
+function lanPior() {
+
+  document.getElementById("myImgEnemy").src="img/mag/porazenie.gif";
+  document.getElementById("myImgEnemyTwo").src="img/mag/porazenie.gif";
+
+}
+
 function lodPoc() {
 
   document.getElementById("myImgEnemy").src="img/mag/lodowy-pocisk.gif";
@@ -210,10 +270,18 @@ function fuzZyw() {
 
 }
 
+
 function szadz() {
 
   document.getElementById("myImgEnemy").src="img/mag/szadz.gif";
   document.getElementById("myImgEnemyTwo").src="img/mag/szadz.gif";
+
+
+}
+function fireWall() {
+
+  document.getElementById("myImgEnemy").src="img/mag/fireWall.gif";
+  document.getElementById("myImgEnemyTwo").src="img/mag/fireWall.gif";
 
 
 }
@@ -295,6 +363,12 @@ function wycStrzal() {
   document.getElementById("myImgEnemy").src="img/trop/wycienczajaca-strzala.gif";
 
 }
+function rytZyw() {
+
+  document.getElementById("myImgSelf").src="img/trop/rytual-ochrony.gif";
+  document.getElementById("myImgAlly").src="img/trop/rytual-ochrony.gif";
+
+}
 
 function gradStrzal() {
 
@@ -325,7 +399,8 @@ function podUd() {
 
 function rozpAta() {
 
-  document.getElementById("myImgEnemy").src="img/tanc/rozpraszajacy-atak.gif";
+  // document.getElementById("myImgEnemy").src="img/tanc/rozpraszajacy-atak.gif";
+  document.getElementById("myImgEnemy").src="img/stun.gif";
 
 }
 
