@@ -78,7 +78,7 @@ body {
 .char-2 {
   position: absolute;
   transform: translate(-50%, -50%);
-  clip-path: inset(0 75% 75% 0);
+  clip-path: inset(0 75% 75% 0) !important;
   margin-left: 460px;
   margin-top: 290px;
 }
