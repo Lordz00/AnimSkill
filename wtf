@@ -1,0 +1,45 @@
+            <div class="smo-kuf-ad">
+                <img src="imgNPC/smo-kuf-ad/char-1.gif" alt="char1" class="char-1">
+                <img src="imgNPC/smo-kuf-ad/char-2.gif" alt="char2" class="char-2">
+                <img src="imgNPC/smo-kuf-ad/char-3.gif" alt="char3" class="char-3">
+                <img src="imgNPC/smo-kuf-ad/char-4.gif" alt="char4" class="char-4">
+                <img src="imgNPC/smo-kuf-webp.webp">
+            </div>
+
+            .smo-kuf-ad {
+                position: relative;
+                max-width: 400px;
+              }
+              
+              .char-1 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                clip-path: inset(0 75% 75% 0);
+                margin-left: 300px;
+                margin-top: 190px;
+              }
+              
+              .char-2 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                clip-path: inset(0 75% 75% 0);
+                margin-left: 460px;
+                margin-top: 290px;
+              }
+              
+              .char-3 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                clip-path: inset(0 75% 75% 0);
+                margin-left: 120px;
+                margin-top: 290px;
+              }
+              
+              .char-4 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                clip-path: inset(0 75% 75% 0);
+                margin-left: 300px;
+                margin-top: 390px;
+              }
+              
