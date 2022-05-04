@@ -169,6 +169,12 @@ function lekkiNac() {
 
 }
 
+function orlStrzal() {
+
+  document.getElementById("myImgEnemy").src="img/low/orla-strzala.gif";
+
+}
+
 function strzalStopa() {
 
   document.getElementById("myImgEnemy").src="img/low/strzal-stopa.gif";
