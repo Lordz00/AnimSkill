@@ -38,6 +38,14 @@ const reset = () => {
 
 
 //WOJOWNIK
+
+const imgChange = (skill) => document.getElementById("myImgEnemy").src=`${skill}`;
+
+
+
+
+
+
 function blyskAtak() {
 
   document.getElementById("myImgEnemy").src="img/woj/blyskawiczny-atak.gif";
