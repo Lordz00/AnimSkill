@@ -438,6 +438,11 @@ function gradStrzal() {
 
 }
 
+function misStr() {
+
+  document.getElementById("myImgEnemy").src="img/trop/mistyczny-strzal.gif";
+
+}
 function blank() {
 
   document.getElementById("myImgEnemy").src="blank";
@@ -476,6 +481,11 @@ function debuffRed() {
 
 }
 
+function wirOst() {
+
+  document.getElementById("myImgSelf").src="img/tanc/wirujace-ostrze.gif";
+
+}
 function blank() {
 
   document.getElementById("myImgEnemy").src="blank";
