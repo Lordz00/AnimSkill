@@ -299,6 +299,26 @@ function manaReg() {
 
 }
 
+function magBar() {
+
+  document.getElementById("myImgSelf").src="img/mag/magiczna-bariera.gif";
+  document.getElementById("myImgAlly").src="img/mag/magiczna-bariera.gif";
+
+}
+
+function curse() {
+
+  document.getElementById("myImgSelf").src="img/mag/curse.gif";
+
+}
+function meditate() {
+
+  document.getElementById("myImgSelf").src="img/mag/meditation.gif";
+
+}
+
+
+
 
 // PALADYN
 
@@ -326,6 +346,40 @@ function gniewBog() {
 
 }
 
+function udeTar() {
+
+  document.getElementById("myImgEnemy").src="img/pal/uderzenie-tarcza.gif";
+
+}
+function falLecz() {
+
+  document.getElementById("myImgSelf").src="img/pal/fala-leczenia.gif";
+  document.getElementById("myImgAlly").src="img/pal/fala-leczenia.gif";
+
+}
+function porTar() {
+
+  document.getElementById("myImgSelf").src="img/pal/porazajaca-tarcza.gif";
+  document.getElementById("myImgAlly").src="img/pal/porazajaca-tarcza.gif";
+
+}
+function aurOch() {
+
+  document.getElementById("myImgSelf").src="img/pal/aura-ochrony.gif";
+  document.getElementById("myImgAlly").src="img/pal/aura-ochrony.gif";
+
+}
+function tarSlo() {
+
+  document.getElementById("myImgSelf").src="img/pal/tarcza-slonca.gif";
+  document.getElementById("myImgAlly").src="img/pal/tarcza-slonca.gif";
+
+}
+function kulSwi() {
+
+  document.getElementById("myImgEnemy").src="img/pal/kula-swiatlosci.gif";
+
+}
 function blank() {
 
   document.getElementById("myImgEnemy").src="blank";
