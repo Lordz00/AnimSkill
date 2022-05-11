@@ -313,6 +313,12 @@ body {
 }
 
 
+
+.cont {
+  display: inline-block;
+  grid-row: 1;
+}
+
 /* NOTES FOR SVG icons */
 
 /* 

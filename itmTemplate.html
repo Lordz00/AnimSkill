@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="row mb-3">
+        <div class="col-6 themed-grid-col">
+            <canvas id="myCanvas" width="640" height="640"
+                style="background-color: rgb(94, 84, 104); margin: 100px 100px 100px 100px;">
+
+                THIS IS FALLBACK MESSAGE FOR OLD BROWSERS
+
+                YOUR BROWSER IS NOT SUPPORTING CANVAS
+
+            </canvas>
+        </div>
+        <div class="col-6 themed-grid-col">
+            <div class="container-sm mt-5">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Skill name</h5>
+                                <div class="type my-2 p-3">Dropdown (?)
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                                        <select multiple class="form-control" id="itemTypeForm">
+                                          <option>1 - Hełm</option>
+                                          <option>2 - Naszyjnik</option>
+                                          <option>3 - Pierścień</option>
+                                          <option>4 - Rękawice</option>
+                                          <option>5 - Zbroja</option>
+                                          <option>6 - Buty</option>
+                                          <option>7 - Dystansowe</option>
+                                          <option>8 - Strzały</option>
+                                          <option>9 - Kołczany</option>
+                                          <option>10 - Jednoręczne</option>
+                                          <option>11 - Tarcze</option>
+                                          <option>12 - Pomocnicze</option>
+                                          <option>13 - Różdżki</option>
+                                          <option>14 - Orby</option>
+                                          <option>15 - Półtoraręczne</option>
+                                          <option>16 - Dwuręczne</option>
+                                        </select>
+                                      </div>
+                                </div>
+                                <div class="rarity my-2 p-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareZwy" value="zwy" checked>
+                                        <label class="form-check-label" for="inlineRadio1">Zwykły</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareUni" value="uni">
+                                        <label class="form-check-label" for="inlineRadio2">Unikat</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareHer" value="her">
+                                        <label class="form-check-label" for="inlineRadio3">Heroik</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareLeg" value="leg">
+                                        <label class="form-check-label" for="inlineRadio4">Legenda</label>
+                                      </div>
+                                    </div>
+                                <div class="profession my-2 p-3">
+                                    
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkWar" value="war">
+                                        <label class="form-check-label" for="inlineCheckbox1">Wojownik</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkPal" value="pal">
+                                        <label class="form-check-label" for="inlineCheckbox2">Paladyn</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkHun" value="hun">
+                                        <label class="form-check-label" for="inlineCheckbox3">Łowca</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkBla" value="bla">
+                                        <label class="form-check-label" for="inlineCheckbox4">Tancerz</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkMag" value="mag">
+                                        <label class="form-check-label" for="inlineCheckbox5">Mag</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkTra" value="tra">
+                                        <label class="form-check-label" for="inlineCheckbox6">Tropiciel</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="checkAll" value="all">
+                                        <label class="form-check-label" for="inlineCheckbox7">All</label>
+                                      </div>
+                                </div>
+                                <div class="attribute my-2 p-3"></div>
+                                <div class="row justify-content-center px-5 mx-5">
+                                    <button type="button" class="btn btn-primary" id="primary">Primary</button>
+                                    <button type="button" class="btn btn-secondary">Secondary</button>
+                                    <button type="button" class="btn btn-success">Success</button>
+                                    <button type="button" class="btn btn-danger">Danger</button>
+                                    <button type="button" class="btn btn-warning" id="Unikat">Unikat</button>
+                                    <button type="button" class="btn btn-info">Info</button>
+                                    <button type="button" class="btn btn-light">Light</button>
+                                    <button type="button" class="btn btn-dark">Dark</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="itemCanvas.js"></script>
+</body>
+
+</html>
