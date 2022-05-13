@@ -181,13 +181,13 @@ window.onload = function () {
     }
 
     function togAll() {
-        let war = false;
-        let pal = false;
-        let hun = false;
-        let bla = false;
-        let tra = false;
-        let mag = false;
-        let all = true;
+        war = false;
+        pal = false;
+        hun = false;
+        bla = false;
+        tra = false;
+        mag = false;
+        all = true;
         warSwitch.style.backgroundColor = '#0d6efd';
         palSwitch.style.backgroundColor = '#0d6efd';
         hunSwitch.style.backgroundColor = '#0d6efd';
