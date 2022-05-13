@@ -357,6 +357,44 @@ body {
   width: 120px;
 }
 
+.prof {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 1200px;
+  width: 120px;
+}
+
+.att {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 1336px;
+  width: 120px;
+}
+
+#toxSwitch {
+   background-color: #237023;
+   border-color: #292828;
+  }
+#grSwitch {
+   background-color: #8a1739;
+   border-color: #292828;
+  }
+#healSwitch {
+   background-color: #02af2d;
+   border-color: #292828;
+  }
+#fireSwitch {
+   background-color: #d84400;
+   border-color: #292828;
+  }
+#lightSwitch {
+   background-color: #a5a504;
+   border-color: #292828;
+  }
+#coldSwitch {
+   background-color: #1c89c9;
+   border-color: #292828;
+  }
 
 .bg {
   background-color: rebeccapurple;

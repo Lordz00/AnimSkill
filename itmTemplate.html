@@ -19,8 +19,8 @@
   <div class="row mb-3">
     <div class="col-6 themed-grid-col column-types">
       <button type="button" class="btn-itm" id="addHelm-btn">1</button>
-      <button type="button" class="btn-itm">2</button>
-      <button type="button" class="btn-itm">3</button>
+      <button type="button" class="btn-itm" id="addNeck-btn">2</button>
+      <button type="button" class="btn-itm" id="addRing-btn">3</button>
       <button type="button" class="btn-itm">4</button>
       <button type="button" class="btn-itm">5</button>
       <button type="button" class="btn-itm">6</button>
@@ -46,8 +46,8 @@
     </div>
     <div class="col-6 themed-grid-col column-remove">
       <button type="button" class="btn-itm" id="remHelm-btn">&lt;</button>
-      <button type="button" class="btn-itm">&lt;</button>
-      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm" id="remNeck-btn">&lt;</button>
+      <button type="button" class="btn-itm" id="remRing-btn">&lt;</button>
       <button type="button" class="btn-itm">&lt;</button>
       <button type="button" class="btn-itm">&lt;</button>
       <button type="button" class="btn-itm">&lt;</button>
@@ -68,73 +68,32 @@
         <button type="button" class="btn btn-primary rare-btn" id="iRareHer">Heroik</button>
         <button type="button" class="btn btn-primary rare-btn" id="iRareLeg">Legenda</button>
     </div>
+
+
+  <div class="col-6 themed-grid-col prof">
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="warSwitch">Wojownik</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="palSwitch">Paladyn</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="hunSwitch">Łowca</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="blaSwitch">Tancerz</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="traSwitch">Tropiciel</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="magSwitch">Mag</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="allSwitch">Wszyscy</button>
+  </div>
+  <div class="col-6 themed-grid-col att">
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="toxSwitch">Trucizna</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="grSwitch">Głęboka rana</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="healSwitch">Leczenie</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="fireSwitch">Ogień</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="lightSwitch">Błyski</button>
+    <button type="button" class="btn btn-primary rare-btn prof-btn" id="coldSwitch">Zimno</button>
+
+  </div>
     <div class="col-6 themed-grid-col">
-      <div class="container-sm mt-5">
-        <div class="card-group">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Skill name</h5>
-              <div class="type my-2 p-3">Dropdown (?)
-                <div class="form-group">
-                  <label for="exampleFormControlSelect2">Example multiple select</label>
-                  <select multiple class="form-control" id="itemTypeForm">
-                    <option>1 - Hełm</option>
-                    <option>2 - Naszyjnik</option>
-                    <option>3 - Pierścień</option>
-                    <option>4 - Rękawice</option>
-                    <option>5 - Zbroja</option>
-                    <option>6 - Buty</option>
-                    <option>7 - Dystansowe</option>
-                    <option>8 - Strzały</option>
-                    <option>9 - Kołczany</option>
-                    <option>10 - Jednoręczne</option>
-                    <option>11 - Tarcze</option>
-                    <option>12 - Pomocnicze</option>
-                    <option>13 - Różdżki</option>
-                    <option>14 - Orby</option>
-                    <option>15 - Półtoraręczne</option>
-                    <option>16 - Dwuręczne</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="profession my-2 p-3">
-
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkWar" value="war">
-                  <label class="form-check-label" for="inlineCheckbox1">Wojownik</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkPal" value="pal">
-                  <label class="form-check-label" for="inlineCheckbox2">Paladyn</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkHun" value="hun">
-                  <label class="form-check-label" for="inlineCheckbox3">Łowca</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkBla" value="bla">
-                  <label class="form-check-label" for="inlineCheckbox4">Tancerz</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkMag" value="mag">
-                  <label class="form-check-label" for="inlineCheckbox5">Mag</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkTra" value="tra">
-                  <label class="form-check-label" for="inlineCheckbox6">Tropiciel</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="checkAll" value="all">
-                  <label class="form-check-label" for="inlineCheckbox7">All</label>
-                </div>
-              </div>
-              <div class="attribute my-2 p-3"></div>
               <div class="row justify-content-center px-5 mx-5">
                 <button type="button" class="btn btn-primary" id="primary">Primary</button>
-                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-secondary" id="secondary">Secondary</button>
                 <button type="button" class="btn btn-success">Success</button>
-                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-danger" id="testProf">testProf</button>
                 <button type="button" class="btn btn-warning" id="Unikat">Unikat</button>
                 <button type="button" class="btn btn-info" id="testRare">testRare</button>
                 <button type="button" class="btn btn-light">Light</button>
