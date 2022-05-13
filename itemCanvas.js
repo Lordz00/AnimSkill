@@ -5,23 +5,6 @@ window.onload = function () {
     const canvas = document.querySelector('#myCanvas');
     const ctx = canvas.getContext('2d');
 
-
-
-
-
-    // let iconTile = new Image();
-    // iconTile.src = 'grid-icons.png';
-
-
-    // iconTile.onload = function () {
-
-    //     ctx.drawImage(iconTile, 0, 0);
-    // }
-
-
-
-
-
     // drawImage(img, dx, dy)
     // drawImage(img, dx, dy, dw, dh)
     // drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh)
@@ -121,5 +104,46 @@ window.onload = function () {
         // Alert the key name and key code on keydown
         alert(`Key pressed ${name} \r\n Key code value: ${code}`);
     }, false);
+
+
+// This one is going to create helmet arrays
+let helmets = new Array();
+// this one is temporary for tests
+rare = 'yellow';
+
+// create new helmet entry
+function addHelmets () {
+    let nHelmets = helmets.length + 1; 
+    helmets.push('itm' + nHelmets);
+    
+// draw new helmet entry
+    const drawHelmets = () => {
+        ctx.fillStyle = rare;
+        ctx.fillRect(nHelmets*32, 0, 32, 32);
+    }
+
+    drawHelmets();
+};
+
+// remove helmet entry
+
+
+
+
+
+
+const btnHelmets = document.querySelector('#helm-btn');
+btnHelmets.addEventListener('click', addHelmets);
+
+
+
+
+
+
+
+
+
+
+
 
 }

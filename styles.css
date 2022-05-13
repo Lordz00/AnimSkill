@@ -319,6 +319,27 @@ body {
   grid-row: 1;
 }
 
+.canvas {
+  background-color: rgb(94, 84, 104); 
+  margin: 100px 100px 0px 10px;
+}
+
+.column-types {
+  width: 32px;
+  margin-top: 100px;
+  margin-left: 32px;
+}
+
+.btn-itm {
+  height: 30px;
+  width: 30px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: #336D4B;
+
+}
+
+
 /* NOTES FOR SVG icons */
 
 /* 
