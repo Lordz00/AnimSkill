@@ -195,7 +195,15 @@ window.onload = function () {
         traSwitch.style.backgroundColor = '#0d6efd';
         magSwitch.style.backgroundColor = '#0d6efd';
 
-    }
+        console.log(war);
+        console.log(pal);
+        console.log(hun);
+        console.log(bla);
+        console.log(tra);
+        console.log(mag);
+        console.log(all);
+
+    };
 
 
     // switch buttons att
@@ -523,7 +531,7 @@ window.onload = function () {
         light = false;
         cold = false;
     };
-// LOCK MAGIC FOR PHYSICALS
+    // LOCK MAGIC FOR PHYSICALS
     function lockAttPhysical() {
         fire = false;
         light = false;
@@ -1285,38 +1293,39 @@ window.onload = function () {
     Axe();
 
     // exporting
-    
+
 
     const exportCanvas = () => {
-        
-   
 
 
-    let imageData = ctx.getImageData(960, 640, 960, 640);
 
-    // R - The color red (from 0-255)
-    // G - The color green (from 0-255)
-    // B - The color blue (from 0-255)
-    // A - The alpha channel (from 0-255; 0 is transparent and 255 is fully visible)
 
-    for(var i = 0; i < imageData.data.length; i+=4){
+        let imageData = ctx.getImageData(960, 640, 960, 640);
 
-        var average = ( imageData.data[i] + imageData.data[i+1] + imageData.data[i+2]) / 3;
-        imageData.data[i] = average;       // Red
-        imageData.data[i+1] = average;     // Green
-        imageData.data[i+2] = average;     // Blue
-        //imageData.data[i+3] = 50;   // Alpha
-    }
-    ctx.putImageData(imageData, 960, 640);
-    let dataURL = canvas.toDataURL();
+        // R - The color red (from 0-255)
+        // G - The color green (from 0-255)
+        // B - The color blue (from 0-255)
+        // A - The alpha channel (from 0-255; 0 is transparent and 255 is fully visible)
 
-    canvas.src = dataURL;
+        for (var i = 0; i < imageData.data.length; i += 4) {
 
-    // Save canvas image as data url ( default: PNG)
+            var average = (imageData.data[i] + imageData.data[i + 1] + imageData.data[i + 2]) / 3;
+            imageData.data[i] = average; // Red
+            imageData.data[i + 1] = average; // Green
+            imageData.data[i + 2] = average; // Blue
+            //imageData.data[i+3] = 50;   // Alpha
+        }
+        ctx.putImageData(imageData, 960, 640);
+        let dataURL = canvas.toDataURL();
 
-    let exportTest = document.querySelector('#exportTest');
-    exportTest.addEventListener('click', exportCanvas);
-    }; exportCanvas();
+        canvas.src = dataURL;
+
+        // Save canvas image as data url ( default: PNG)
+
+        let exportTest = document.querySelector('#exportTest');
+        exportTest.addEventListener('click', exportCanvas);
+    };
+    exportCanvas();
 
 
     // setting rarirty
