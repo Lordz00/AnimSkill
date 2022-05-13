@@ -457,7 +457,7 @@ window.onload = function () {
         const drawTox = () => {
             if (tox == true) {
 
-                ctx.drawImage(iconTile, 32, 32 * 3, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
+                ctx.drawImage(iconTile, 32, 32 * 2, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
             }
         }
         const drawGr = () => {
@@ -665,6 +665,7 @@ window.onload = function () {
         // remove ring entry
         function removeRings() {
             let nRings = rings.length;
+            itmHeight = 2;
 
             if (nRings > 0) {
                 ctx.clearRect(nRings * 32, itmHeight * 32, 32, 32)
@@ -710,6 +711,7 @@ window.onload = function () {
         // remove gloves entry
         function removeGloves() {
             let nGloves = gloves.length;
+            itmHeight = 3;
 
             if (nGloves > 0) {
                 ctx.clearRect(nGloves * 32, itmHeight * 32, 32, 32)
@@ -757,6 +759,7 @@ window.onload = function () {
         // remove armor entry
         function removeArmor() {
             let nArmor = armor.length;
+            itmHeight = 4;
 
             if (nArmor > 0) {
                 ctx.clearRect(nArmor * 32, itmHeight * 32, 32, 32)
@@ -803,6 +806,7 @@ window.onload = function () {
         // remove boots entry
         function removeBoots() {
             let nBoots = boots.length;
+            itmHeight = 5;
 
             if (nBoots > 0) {
                 ctx.clearRect(nBoots * 32, itmHeight * 32, 32, 32)
@@ -850,6 +854,7 @@ window.onload = function () {
         // remove bow entry
         function removeBow() {
             let nBow = bow.length;
+            itmHeight = 6;
 
             if (nBow > 0) {
                 ctx.clearRect(nBow * 32, itmHeight * 32, 32, 32)
@@ -895,6 +900,7 @@ window.onload = function () {
         // remove arrow entry
         function removeArrow() {
             let nArrow = arrow.length;
+            itmHeight = 7;
 
             if (nArrow > 0) {
                 ctx.clearRect(nArrow * 32, itmHeight * 32, 32, 32)
@@ -944,6 +950,7 @@ window.onload = function () {
         // remove quiver entry
         function removeQuiver() {
             let nQuiver = quiver.length;
+            itmHeight = 8;
 
             if (nQuiver > 0) {
                 ctx.clearRect(nQuiver * 32, itmHeight * 32, 32, 32)
@@ -993,6 +1000,7 @@ window.onload = function () {
         // remove Sabre entry
         function removeSabre() {
             let nSabre = sabre.length;
+            itmHeight = 9;
 
             if (nSabre > 0) {
                 ctx.clearRect(nSabre * 32, itmHeight * 32, 32, 32)
@@ -1040,6 +1048,7 @@ window.onload = function () {
         // remove Shield entry
         function removeShield() {
             let nShield = shield.length;
+            itmHeight = 10;
 
             if (nShield > 0) {
                 ctx.clearRect(nShield * 32, itmHeight * 32, 32, 32)
@@ -1087,6 +1096,7 @@ window.onload = function () {
         // remove Dagger entry
         function removeDagger() {
             let nDagger = dagger.length;
+            itmHeight = 11;
 
             if (nDagger > 0) {
                 ctx.clearRect(nDagger * 32, itmHeight * 32, 32, 32)
@@ -1134,6 +1144,7 @@ window.onload = function () {
         // remove Wand entry
         function removeWand() {
             let nWand = wand.length;
+            itmHeight = 12;
 
             if (nWand > 0) {
                 ctx.clearRect(nWand * 32, itmHeight * 32, 32, 32)
@@ -1181,6 +1192,7 @@ window.onload = function () {
         // remove orb entry
         function removeOrb() {
             let nOrb = orb.length;
+            itmHeight = 13;
 
             if (nOrb > 0) {
                 ctx.clearRect(nOrb * 32, itmHeight * 32, 32, 32)
@@ -1227,6 +1239,7 @@ window.onload = function () {
         // remove Sword entry
         function removeSword() {
             let nSword = sword.length;
+            itmHeight = 14;
 
             if (nSword > 0) {
                 ctx.clearRect(nSword * 32, itmHeight * 32, 32, 32)
@@ -1274,6 +1287,7 @@ window.onload = function () {
         // remove axe entry
         function removeAxe() {
             let nAxe = axe.length;
+            itmHeight = 15;
 
             if (nAxe > 0) {
                 ctx.clearRect(nAxe * 32, itmHeight * 32, 32, 32)
