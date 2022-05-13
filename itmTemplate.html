@@ -18,7 +18,7 @@
 
   <div class="row mb-3">
     <div class="col-6 themed-grid-col column-types">
-      <button type="button" class="btn-itm" id="helm-btn">1</button>
+      <button type="button" class="btn-itm" id="addHelm-btn">1</button>
       <button type="button" class="btn-itm">2</button>
       <button type="button" class="btn-itm">3</button>
       <button type="button" class="btn-itm">4</button>
@@ -36,13 +36,37 @@
       <button type="button" class="btn-itm">16</button>
     </div>
     <div class="col-6 themed-grid-col">
-      <canvas id="myCanvas" class="canvas" width="640" height="640">
+      <canvas id="myCanvas" class="canvas" width="960" height="640">
 
         THIS IS FALLBACK MESSAGE FOR OLD BROWSERS
 
         YOUR BROWSER IS NOT SUPPORTING CANVAS
 
       </canvas>
+    </div>
+    <div class="col-6 themed-grid-col column-remove">
+      <button type="button" class="btn-itm" id="remHelm-btn">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+      <button type="button" class="btn-itm">&lt;</button>
+    </div>
+    <div class="col-6 themed-grid-col rarity">
+        <button type="button" class="btn btn-primary rare-btn" id="iRareZwy">Zwykły</button>
+        <button type="button" class="btn btn-primary rare-btn" id="iRareUni">Unikat</button>
+        <button type="button" class="btn btn-primary rare-btn" id="iRareHer">Heroik</button>
+        <button type="button" class="btn btn-primary rare-btn" id="iRareLeg">Legenda</button>
     </div>
     <div class="col-6 themed-grid-col">
       <div class="container-sm mt-5">
@@ -73,25 +97,7 @@
                   </select>
                 </div>
               </div>
-              <div class="rarity my-2 p-3">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareZwy" value="zwy"
-                    checked>
-                  <label class="form-check-label" for="inlineRadio1">Zwykły</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareUni" value="uni">
-                  <label class="form-check-label" for="inlineRadio2">Unikat</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareHer" value="her">
-                  <label class="form-check-label" for="inlineRadio3">Heroik</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="iRareLeg" value="leg">
-                  <label class="form-check-label" for="inlineRadio4">Legenda</label>
-                </div>
-              </div>
+
               <div class="profession my-2 p-3">
 
                 <div class="form-check form-check-inline">
@@ -130,7 +136,7 @@
                 <button type="button" class="btn btn-success">Success</button>
                 <button type="button" class="btn btn-danger">Danger</button>
                 <button type="button" class="btn btn-warning" id="Unikat">Unikat</button>
-                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-info" id="testRare">testRare</button>
                 <button type="button" class="btn btn-light">Light</button>
                 <button type="button" class="btn btn-dark">Dark</button>
               </div>
