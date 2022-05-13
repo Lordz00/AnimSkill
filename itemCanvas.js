@@ -515,10 +515,28 @@ window.onload = function () {
     testBtnSecond.addEventListener('click', drawTestDesc);
 
 
+    // LOCK PROF AND ATTRIBUTES
+    function lockAttCloth() {
+        tox = false;
+        gr = false;
+        fire = false;
+        light = false;
+        cold = false;
+    };
+// LOCK MAGIC FOR PHYSICALS
+    function lockAttPhysical() {
+        fire = false;
+        light = false;
+        cold = false;
+    };
 
+    function lockAttMagic() {
+        tox = false;
+        gr = false;
+    };
 
     // HELMETS
-    function Helmets () {
+    function Helmets() {
 
 
         // HELMETS
@@ -534,6 +552,7 @@ window.onload = function () {
                 ctx.fillStyle = itmColor;
                 varRow = nHelmets;
                 itmHeight = 0;
+                lockAttCloth();
                 ctx.fillRect(nHelmets * 32, itmHeight * 32, 32, 32);
                 drawDesc();
             }
@@ -565,7 +584,7 @@ window.onload = function () {
 
 
     // NECKLACES
-    function Necklaces () {
+    function Necklaces() {
 
         let necklaces = new Array();
 
@@ -579,6 +598,7 @@ window.onload = function () {
                 ctx.fillStyle = itmColor;
                 varRow = nNecklaces;
                 itmHeight = 1;
+                lockAttCloth();
                 ctx.fillRect(nNecklaces * 32, itmHeight * 32, 32, 32);
                 drawDesc();
 
@@ -610,7 +630,7 @@ window.onload = function () {
     Necklaces();
 
     // RINGS
-    function Rings () {
+    function Rings() {
 
 
         let rings = new Array();
@@ -625,6 +645,7 @@ window.onload = function () {
                 ctx.fillStyle = itmColor;
                 varRow = nRings;
                 itmHeight = 2;
+                lockAttCloth();
                 ctx.fillRect(nRings * 32, itmHeight * 32, 32, 32);
                 drawDesc();
 
@@ -652,9 +673,9 @@ window.onload = function () {
 
     }
     Rings();
-   
+
     // GLOVES
-    function Gloves () {
+    function Gloves() {
 
 
         let gloves = new Array();
@@ -669,6 +690,7 @@ window.onload = function () {
                 ctx.fillStyle = itmColor;
                 varRow = nGloves;
                 itmHeight = 3;
+                lockAttCloth();
                 ctx.fillRect(nGloves * 32, itmHeight * 32, 32, 32);
                 drawDesc();
 
@@ -699,566 +721,572 @@ window.onload = function () {
     Gloves();
 
 
- // ARMOR
- function Armor() {
+    // ARMOR
+    function Armor() {
 
 
-    let armor = new Array();
+        let armor = new Array();
 
-    // create new armor entry
-    function addArmor() {
-        let nArmor = armor.length + 1;
-        armor.push('itm' + nArmor);
+        // create new armor entry
+        function addArmor() {
+            let nArmor = armor.length + 1;
+            armor.push('itm' + nArmor);
 
-        // draw new armor entry
-        const drawArmor = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nArmor;
-            itmHeight = 4;
-            ctx.fillRect(nArmor * 32, itmHeight * 32, 32, 32);
-            drawDesc();
+            // draw new armor entry
+            const drawArmor = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nArmor;
+                itmHeight = 4;
+                lockAttCloth();
+                ctx.fillRect(nArmor * 32, itmHeight * 32, 32, 32);
+                drawDesc();
 
+            }
+
+            drawArmor();
+        };
+
+        // remove armor entry
+        function removeArmor() {
+            let nArmor = armor.length;
+
+            if (nArmor > 0) {
+                ctx.clearRect(nArmor * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            armor.pop();
         }
 
-        drawArmor();
-    };
+        const btnAddArmor = document.querySelector('#addArmor-btn');
+        btnAddArmor.addEventListener('click', addArmor);
+        const btnRemArmor = document.querySelector('#remArmor-btn');
+        btnRemArmor.addEventListener('click', removeArmor);
 
-    // remove armor entry
-    function removeArmor() {
-        let nArmor = armor.length;
 
-        if (nArmor > 0) {
-            ctx.clearRect(nArmor * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        armor.pop();
     }
-
-    const btnAddArmor = document.querySelector('#addArmor-btn');
-    btnAddArmor.addEventListener('click', addArmor);
-    const btnRemArmor = document.querySelector('#remArmor-btn');
-    btnRemArmor.addEventListener('click', removeArmor);
+    Armor();
 
 
-}
-Armor();
+    // BOOTS
+    function Boots() {
 
 
- // BOOTS
- function Boots() {
+        let boots = new Array();
 
+        // create new boots entry
+        function addBoots() {
+            let nBoots = boots.length + 1;
+            boots.push('itm' + nBoots);
 
-    let boots = new Array();
+            // draw new boots entry
+            const drawBoots = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nBoots;
+                itmHeight = 5;
+                ctx.fillRect(nBoots * 32, itmHeight * 32, 32, 32);
+                drawDesc();
 
-    // create new boots entry
-    function addBoots() {
-        let nBoots = boots.length + 1;
-        boots.push('itm' + nBoots);
+            }
 
-        // draw new boots entry
-        const drawBoots = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nBoots;
-            itmHeight = 5;
-            ctx.fillRect(nBoots * 32, itmHeight * 32, 32, 32);
-            drawDesc();
+            drawBoots();
+        };
 
+        // remove boots entry
+        function removeBoots() {
+            let nBoots = boots.length;
+
+            if (nBoots > 0) {
+                ctx.clearRect(nBoots * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            boots.pop();
         }
 
-        drawBoots();
-    };
+        const btnAddBoots = document.querySelector('#addBoots-btn');
+        btnAddBoots.addEventListener('click', addBoots);
+        const btnRemBoots = document.querySelector('#remBoots-btn');
+        btnRemBoots.addEventListener('click', removeBoots);
 
-    // remove boots entry
-    function removeBoots() {
-        let nBoots = boots.length;
 
-        if (nBoots > 0) {
-            ctx.clearRect(nBoots * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        boots.pop();
     }
-
-    const btnAddBoots = document.querySelector('#addBoots-btn');
-    btnAddBoots.addEventListener('click', addBoots);
-    const btnRemBoots = document.querySelector('#remBoots-btn');
-    btnRemBoots.addEventListener('click', removeBoots);
-
-
-}
-Boots();
+    Boots();
 
 
 
- // BOWS
- function Bow() {
+    // BOWS
+    function Bow() {
 
 
-    let bow = new Array();
-  
-    // create new bow entry
-    function addBow() {
-        let nBow = bow.length + 1;
-        bow.push('itm' + nBow);
-  
-        // draw new bow entry
-        const drawBow = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nBow;
-            itmHeight = 6;
-            ctx.fillRect(nBow * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+        let bow = new Array();
+
+        // create new bow entry
+        function addBow() {
+            let nBow = bow.length + 1;
+            bow.push('itm' + nBow);
+
+            // draw new bow entry
+            const drawBow = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nBow;
+                itmHeight = 6;
+                ctx.fillRect(nBow * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawBow();
+        };
+
+        // remove bow entry
+        function removeBow() {
+            let nBow = bow.length;
+
+            if (nBow > 0) {
+                ctx.clearRect(nBow * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            bow.pop();
         }
-  
-        drawBow();
-    };
-  
-    // remove bow entry
-    function removeBow() {
-        let nBow = bow.length;
-  
-        if (nBow > 0) {
-            ctx.clearRect(nBow * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        bow.pop();
+
+        const btnAddBow = document.querySelector('#addBow-btn');
+        btnAddBow.addEventListener('click', addBow);
+        const btnRemBow = document.querySelector('#remBow-btn');
+        btnRemBow.addEventListener('click', removeBow);
+
+
     }
-  
-    const btnAddBow = document.querySelector('#addBow-btn');
-    btnAddBow.addEventListener('click', addBow);
-    const btnRemBow = document.querySelector('#remBow-btn');
-    btnRemBow.addEventListener('click', removeBow);
-  
-  
-  }
-  Bow();
-  
-   // ARROW
- function Arrow() {
+    Bow();
+
+    // ARROW
+    function Arrow() {
 
 
-    let arrow = new Array();
-  
-    // create new arrow entry
-    function addArrow() {
-        let nArrow = arrow.length + 1;
-        arrow.push('itm' + nArrow);
-  
-        // draw new arrow entry
-        const drawArrow = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nArrow;
-            itmHeight = 7;
-            ctx.fillRect(nArrow * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+        let arrow = new Array();
+
+        // create new arrow entry
+        function addArrow() {
+            let nArrow = arrow.length + 1;
+            arrow.push('itm' + nArrow);
+
+            // draw new arrow entry
+            const drawArrow = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nArrow;
+                itmHeight = 7;
+                ctx.fillRect(nArrow * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawArrow();
+        };
+
+        // remove arrow entry
+        function removeArrow() {
+            let nArrow = arrow.length;
+
+            if (nArrow > 0) {
+                ctx.clearRect(nArrow * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            arrow.pop();
         }
-  
-        drawArrow();
-    };
-  
-    // remove arrow entry
-    function removeArrow() {
-        let nArrow = arrow.length;
-  
-        if (nArrow > 0) {
-            ctx.clearRect(nArrow * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        arrow.pop();
+
+        const btnAddArrow = document.querySelector('#addArrow-btn');
+        btnAddArrow.addEventListener('click', addArrow);
+        const btnRemArrow = document.querySelector('#remArrow-btn');
+        btnRemArrow.addEventListener('click', removeArrow);
+
+
     }
-  
-    const btnAddArrow = document.querySelector('#addArrow-btn');
-    btnAddArrow.addEventListener('click', addArrow);
-    const btnRemArrow = document.querySelector('#remArrow-btn');
-    btnRemArrow.addEventListener('click', removeArrow);
-  
-  
-  }
-  Arrow();
-  
-  
+    Arrow();
 
 
- // QUIVER
- function Quiver() {
 
 
-    let quiver = new Array();
-  
-    // create new quiver entry
-    function addQuiver() {
-        let nQuiver = quiver.length + 1;
-        quiver.push('itm' + nQuiver);
-  
-        // draw new quiver entry
-        const drawQuiver = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nQuiver;
-            itmHeight = 8;
-            ctx.fillRect(nQuiver * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+    // QUIVER
+    function Quiver() {
+
+
+        let quiver = new Array();
+
+        // create new quiver entry
+        function addQuiver() {
+            let nQuiver = quiver.length + 1;
+            quiver.push('itm' + nQuiver);
+
+            // draw new quiver entry
+            const drawQuiver = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nQuiver;
+                itmHeight = 8;
+                lockAttCloth();
+                ctx.fillRect(nQuiver * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawQuiver();
+        };
+
+        // remove quiver entry
+        function removeQuiver() {
+            let nQuiver = quiver.length;
+
+            if (nQuiver > 0) {
+                ctx.clearRect(nQuiver * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            quiver.pop();
         }
-  
-        drawQuiver();
-    };
-  
-    // remove quiver entry
-    function removeQuiver() {
-        let nQuiver = quiver.length;
-  
-        if (nQuiver > 0) {
-            ctx.clearRect(nQuiver * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        quiver.pop();
+
+        const btnAddQuiver = document.querySelector('#addQuiver-btn');
+        btnAddQuiver.addEventListener('click', addQuiver);
+        const btnRemQuiver = document.querySelector('#remQuiver-btn');
+        btnRemQuiver.addEventListener('click', removeQuiver);
+
+
     }
-  
-    const btnAddQuiver = document.querySelector('#addQuiver-btn');
-    btnAddQuiver.addEventListener('click', addQuiver);
-    const btnRemQuiver = document.querySelector('#remQuiver-btn');
-    btnRemQuiver.addEventListener('click', removeQuiver);
-  
-  
-  }
-  Quiver();
-  
-  
-  
-  
-
- // SABRE
- function Sabre() {
+    Quiver();
 
 
-    let sabre = new Array();
-  
-    // create new Sabre entry
-    function addSabre() {
-        let nSabre = sabre.length + 1;
-        sabre.push('itm' + nSabre);
-  
-        // draw new Sabre entry
-        const drawSabre = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nSabre;
-            itmHeight = 9;
-            ctx.fillRect(nSabre * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+
+
+
+    // SABRE
+    function Sabre() {
+
+
+        let sabre = new Array();
+
+        // create new Sabre entry
+        function addSabre() {
+            let nSabre = sabre.length + 1;
+            sabre.push('itm' + nSabre);
+
+            // draw new Sabre entry
+            const drawSabre = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nSabre;
+                itmHeight = 9;
+                ctx.fillRect(nSabre * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawSabre();
+        };
+
+        // remove Sabre entry
+        function removeSabre() {
+            let nSabre = sabre.length;
+
+            if (nSabre > 0) {
+                ctx.clearRect(nSabre * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            sabre.pop();
         }
-  
-        drawSabre();
-    };
-  
-    // remove Sabre entry
-    function removeSabre() {
-        let nSabre = sabre.length;
-  
-        if (nSabre > 0) {
-            ctx.clearRect(nSabre * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        sabre.pop();
+
+        const btnAddSabre = document.querySelector('#addSabre-btn');
+        btnAddSabre.addEventListener('click', addSabre);
+        const btnRemSabre = document.querySelector('#remSabre-btn');
+        btnRemSabre.addEventListener('click', removeSabre);
+
+
     }
-  
-    const btnAddSabre = document.querySelector('#addSabre-btn');
-    btnAddSabre.addEventListener('click', addSabre);
-    const btnRemSabre = document.querySelector('#remSabre-btn');
-    btnRemSabre.addEventListener('click', removeSabre);
-  
-  
-  }
-  Sabre();
+    Sabre();
 
 
- // SHIELD
- function Shield() {
+    // SHIELD
+    function Shield() {
 
 
-    let shield = new Array();
-  
-    // create new Shield entry
-    function addShield() {
-        let nShield = shield.length + 1;
-        shield.push('itm' + nShield);
-  
-        // draw new Shield entry
-        const drawShield = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nShield;
-            itmHeight = 10;
-            ctx.fillRect(nShield * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+        let shield = new Array();
+
+        // create new Shield entry
+        function addShield() {
+            let nShield = shield.length + 1;
+            shield.push('itm' + nShield);
+
+            // draw new Shield entry
+            const drawShield = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nShield;
+                itmHeight = 10;
+                lockAttCloth();
+                ctx.fillRect(nShield * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawShield();
+        };
+
+        // remove Shield entry
+        function removeShield() {
+            let nShield = shield.length;
+
+            if (nShield > 0) {
+                ctx.clearRect(nShield * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            shield.pop();
         }
-  
-        drawShield();
-    };
-  
-    // remove Shield entry
-    function removeShield() {
-        let nShield = shield.length;
-  
-        if (nShield > 0) {
-            ctx.clearRect(nShield * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        shield.pop();
+
+        const btnAddShield = document.querySelector('#addShield-btn');
+        btnAddShield.addEventListener('click', addShield);
+        const btnRemShield = document.querySelector('#remShield-btn');
+        btnRemShield.addEventListener('click', removeShield);
+
+
     }
-  
-    const btnAddShield = document.querySelector('#addShield-btn');
-    btnAddShield.addEventListener('click', addShield);
-    const btnRemShield = document.querySelector('#remShield-btn');
-    btnRemShield.addEventListener('click', removeShield);
-  
-  
-  }
-  Shield();
+    Shield();
 
 
- // DAGGER
- function Dagger() {
+    // DAGGER
+    function Dagger() {
 
 
-    let dagger = new Array();
-  
-    // create new Dagger entry
-    function addDagger() {
-        let nDagger = dagger.length + 1;
-        dagger.push('itm' + nDagger);
-  
-        // draw new Dagger entry
-        const drawDagger = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nDagger;
-            itmHeight = 11;
-            ctx.fillRect(nDagger * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+        let dagger = new Array();
+
+        // create new Dagger entry
+        function addDagger() {
+            let nDagger = dagger.length + 1;
+            dagger.push('itm' + nDagger);
+
+            // draw new Dagger entry
+            const drawDagger = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nDagger;
+                itmHeight = 11;
+                lockAttPhysical();
+                ctx.fillRect(nDagger * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawDagger();
+        };
+
+        // remove Dagger entry
+        function removeDagger() {
+            let nDagger = dagger.length;
+
+            if (nDagger > 0) {
+                ctx.clearRect(nDagger * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            dagger.pop();
         }
-  
-        drawDagger();
-    };
-  
-    // remove Dagger entry
-    function removeDagger() {
-        let nDagger = dagger.length;
-  
-        if (nDagger > 0) {
-            ctx.clearRect(nDagger * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        dagger.pop();
+
+        const btnAddDagger = document.querySelector('#addDagger-btn');
+        btnAddDagger.addEventListener('click', addDagger);
+        const btnRemDagger = document.querySelector('#remDagger-btn');
+        btnRemDagger.addEventListener('click', removeDagger);
+
+
     }
-  
-    const btnAddDagger = document.querySelector('#addDagger-btn');
-    btnAddDagger.addEventListener('click', addDagger);
-    const btnRemDagger = document.querySelector('#remDagger-btn');
-    btnRemDagger.addEventListener('click', removeDagger);
-  
-  
-  }
-  Dagger();
+    Dagger();
 
 
- // WAND
- function Wand() {
+    // WAND
+    function Wand() {
 
 
-    let wand = new Array();
-  
-    // create new wand entry
-    function addWand() {
-        let nWand = wand.length + 1;
-        wand.push('itm' + nWand);
-  
-        // draw new wand entry
-        const drawWand = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nWand;
-            itmHeight = 12;
-            ctx.fillRect(nWand * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+        let wand = new Array();
+
+        // create new wand entry
+        function addWand() {
+            let nWand = wand.length + 1;
+            wand.push('itm' + nWand);
+
+            // draw new wand entry
+            const drawWand = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nWand;
+                itmHeight = 12;
+                lockAttMagic();
+                ctx.fillRect(nWand * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawWand();
+        };
+
+        // remove Wand entry
+        function removeWand() {
+            let nWand = wand.length;
+
+            if (nWand > 0) {
+                ctx.clearRect(nWand * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            wand.pop();
         }
-  
-        drawWand();
-    };
-  
-    // remove Wand entry
-    function removeWand() {
-        let nWand = wand.length;
-  
-        if (nWand > 0) {
-            ctx.clearRect(nWand * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        wand.pop();
+
+        const btnaddWand = document.querySelector('#addWand-btn');
+        btnaddWand.addEventListener('click', addWand);
+        const btnRemWand = document.querySelector('#remWand-btn');
+        btnRemWand.addEventListener('click', removeWand);
+
+
     }
-  
-    const btnaddWand = document.querySelector('#addWand-btn');
-    btnaddWand.addEventListener('click', addWand);
-    const btnRemWand = document.querySelector('#remWand-btn');
-    btnRemWand.addEventListener('click', removeWand);
-  
-  
-  }
-  Wand();
-  
-  
- // ORB
- function Orb() {
+    Wand();
 
 
-    let orb = new Array();
-  
-    // create new orb entry
-    function addOrb() {
-        let nOrb = orb.length + 1;
-        orb.push('itm' + nOrb);
-  
-        // draw new orb entry
-        const drawOrb = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nOrb;
-            itmHeight = 13;
-            ctx.fillRect(nOrb * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+    // ORB
+    function Orb() {
+
+
+        let orb = new Array();
+
+        // create new orb entry
+        function addOrb() {
+            let nOrb = orb.length + 1;
+            orb.push('itm' + nOrb);
+
+            // draw new orb entry
+            const drawOrb = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nOrb;
+                itmHeight = 13;
+                lockAttMagic();
+                ctx.fillRect(nOrb * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawOrb();
+        };
+
+        // remove orb entry
+        function removeOrb() {
+            let nOrb = orb.length;
+
+            if (nOrb > 0) {
+                ctx.clearRect(nOrb * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            orb.pop();
         }
-  
-        drawOrb();
-    };
-  
-    // remove orb entry
-    function removeOrb() {
-        let nOrb = orb.length;
-  
-        if (nOrb > 0) {
-            ctx.clearRect(nOrb * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        orb.pop();
+
+        const btnaddOrb = document.querySelector('#addOrb-btn');
+        btnaddOrb.addEventListener('click', addOrb);
+        const btnRemOrb = document.querySelector('#remOrb-btn');
+        btnRemOrb.addEventListener('click', removeOrb);
+
+
     }
-  
-    const btnaddOrb = document.querySelector('#addOrb-btn');
-    btnaddOrb.addEventListener('click', addOrb);
-    const btnRemOrb = document.querySelector('#remOrb-btn');
-    btnRemOrb.addEventListener('click', removeOrb);
-  
-  
-  }
-  Orb();
-  
-  
- // Sword
- function Sword() {
+    Orb();
 
 
-    let sword = new Array();
-  
-    // create new Sword entry
-    function addSword() {
-        let nSword = sword.length + 1;
-        sword.push('itm' + nSword);
-  
-        // draw new Sword entry
-        const drawSword = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nSword;
-            itmHeight = 14;
-            ctx.fillRect(nSword * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+    // Sword
+    function Sword() {
+
+
+        let sword = new Array();
+
+        // create new Sword entry
+        function addSword() {
+            let nSword = sword.length + 1;
+            sword.push('itm' + nSword);
+
+            // draw new Sword entry
+            const drawSword = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nSword;
+                itmHeight = 14;
+                ctx.fillRect(nSword * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawSword();
+        };
+
+        // remove Sword entry
+        function removeSword() {
+            let nSword = sword.length;
+
+            if (nSword > 0) {
+                ctx.clearRect(nSword * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            sword.pop();
         }
-  
-        drawSword();
-    };
-  
-    // remove Sword entry
-    function removeSword() {
-        let nSword = sword.length;
-  
-        if (nSword > 0) {
-            ctx.clearRect(nSword * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        sword.pop();
+
+        const btnAddSword = document.querySelector('#addSword-btn');
+        btnAddSword.addEventListener('click', addSword);
+        const btnRemSword = document.querySelector('#remSword-btn');
+        btnRemSword.addEventListener('click', removeSword);
+
+
     }
-  
-    const btnAddSword = document.querySelector('#addSword-btn');
-    btnAddSword.addEventListener('click', addSword);
-    const btnRemSword = document.querySelector('#remSword-btn');
-    btnRemSword.addEventListener('click', removeSword);
-  
-  
-  }
-  Sword();
-  
-  
-  
- // Axe
- function Axe() {
+    Sword();
 
 
-    let axe = new Array();
-  
-    // create new axe entry
-    function addAxe() {
-        let nAxe = axe.length + 1;
-        axe.push('itm' + nAxe);
-  
-        // draw new axe entry
-        const drawAxe = () => {
-            ctx.fillStyle = itmColor;
-            varRow = nAxe;
-            itmHeight = 15;
-            ctx.fillRect(nAxe * 32, itmHeight * 32, 32, 32);
-            drawDesc();
-  
+
+    // Axe
+    function Axe() {
+
+
+        let axe = new Array();
+
+        // create new axe entry
+        function addAxe() {
+            let nAxe = axe.length + 1;
+            axe.push('itm' + nAxe);
+
+            // draw new axe entry
+            const drawAxe = () => {
+                ctx.fillStyle = itmColor;
+                varRow = nAxe;
+                itmHeight = 15;
+                ctx.fillRect(nAxe * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+
+            }
+
+            drawAxe();
+        };
+
+        // remove axe entry
+        function removeAxe() {
+            let nAxe = axe.length;
+
+            if (nAxe > 0) {
+                ctx.clearRect(nAxe * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            axe.pop();
         }
-  
-        drawAxe();
-    };
-  
-    // remove axe entry
-    function removeAxe() {
-        let nAxe = axe.length;
-  
-        if (nAxe > 0) {
-            ctx.clearRect(nAxe * 32, itmHeight * 32, 32, 32)
-        } else {
-            console.log('przestań');
-        }
-        axe.pop();
+
+        const btnAddAxe = document.querySelector('#addAxe-btn');
+        btnAddAxe.addEventListener('click', addAxe);
+        const btnRemAxe = document.querySelector('#remAxe-btn');
+        btnRemAxe.addEventListener('click', removeAxe);
+
+
     }
-  
-    const btnAddAxe = document.querySelector('#addAxe-btn');
-    btnAddAxe.addEventListener('click', addAxe);
-    const btnRemAxe = document.querySelector('#remAxe-btn');
-    btnRemAxe.addEventListener('click', removeAxe);
-  
-  
-  }
-  Axe();
-  
-  
-  
-  
+    Axe();
+
+
+
+
 
 
     // setting rarirty
