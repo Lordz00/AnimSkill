@@ -543,6 +543,63 @@ window.onload = function () {
         gr = false;
     };
 
+
+        // templateFunction
+        function Template() {
+
+        // HELMETS
+        let template = new Array();
+
+        // create new helmet entry
+        function templateAdd() {
+            let templateNum = template.length + 1;
+            template.push('itm' + templateNum);
+
+            // draw new helmet entry
+            const drawTemplate = () => {
+                ctx.fillStyle = itmColor;
+                varRow = templateNum;
+                itmHeight = 0;
+                lockAttCloth();
+                ctx.fillRect(templateNum * 32, itmHeight * 32, 32, 32);
+                drawDesc();
+            }
+
+            drawTemplate();
+        };
+
+        // remove helmet entry
+        function templateRem() {
+            itmHeight = 0;
+            let nHelmets = template.length;
+            if (templateNum > 0) {
+                ctx.clearRect(templateNum * 32, itmHeight * 32, 32, 32)
+            } else {
+                console.log('przestań');
+            }
+            template.pop();
+        }
+
+
+        // adding and removing helmets
+        const btnAddHelmets = document.querySelector('#addHelm-btn');
+        btnAddHelmets.addEventListener('click', addHelmets);
+        const btnRemHelmets = document.querySelector('#remHelm-btn');
+        btnRemHelmets.addEventListener('click', removeHelmets);
+
+    }
+    Template();
+
+
+
+
+
+
+
+
+
+
+
     // HELMETS
     function Helmets() {
 
