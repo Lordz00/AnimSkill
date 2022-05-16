@@ -321,19 +321,20 @@ body {
 
 .canvas {
   background-color: rgb(94, 84, 104); 
-  margin: 100px 10px 0px 10px;
+  margin: 100px 10px 0px 20px;
 }
 
 .column-types {
   width: 32px;
   margin-top: 100px;
+  margin-left: 20px;
 }
 
 .column-remove {
   position: absolute;
   width: 32px;
   margin-top: 100px;
-  margin-left: 1016px;
+  margin-left: 1046px;
 }
 
 .btn-itm {
@@ -345,10 +346,16 @@ body {
 
 }
 
+.btn-itm:hover {
+  color: #fff;
+  background-color: #26382e;
+  font-weight: bold;
+}
+
 .rarity {
   position: absolute;
   margin-top: 100px;
-  margin-left: 1064px;
+  margin-left: 1094px;
   width: 64px;
 }
 
@@ -360,15 +367,27 @@ body {
 .prof {
   position: absolute;
   margin-top: 100px;
-  margin-left: 1200px;
+  margin-left: 1230px;
   width: 120px;
 }
 
 .att {
   position: absolute;
   margin-top: 100px;
-  margin-left: 1336px;
+  margin-left: 1366px;
   width: 120px;
+}
+
+.hidden {
+  display: none;
+}
+
+.legend {
+  margin: 30px 0 0 84px;
+  background-color: #535250;
+  border-radius: 30px;
+  width: 960px;
+  height: fit-content;
 }
 
 #toxSwitch {
@@ -396,8 +415,10 @@ body {
    border-color: #292828;
   }
 
+
+
 .bg {
-  background-color: #bdbd03;
+  background-color: #53534a;
 }
 
 /* NOTES FOR SVG icons */

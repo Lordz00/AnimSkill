@@ -79,11 +79,6 @@ window.onload = function () {
         btnLeg.style.backgroundColor = 'red';
     }
 
-    const checkRare = () => {
-        console.log(rare);
-        console.log(itmColor);
-    }
-
 
     // ITEM FEATURES
     // professions
@@ -343,7 +338,20 @@ window.onload = function () {
 
     }
 
-
+    function attReset () {
+        tox = false;
+        toxSwitch.style.backgroundColor = '#237023';
+        gr = false;
+        grSwitch.style.backgroundColor = '#8a1739';
+        heal = false;
+        healSwitch.style.backgroundColor = '#02af2d';
+        fire = false;
+        fireSwitch.style.backgroundColor = '#d84400';
+        light = false;
+        lightSwitch.style.backgroundColor = '#a5a504';
+        cold = false;
+        coldSwitch.style.backgroundColor = '#1c89c9';
+    }
 
 
 
@@ -355,6 +363,38 @@ window.onload = function () {
     traSwitch.addEventListener('click', togTra);
     magSwitch.addEventListener('click', togMag);
     allSwitch.addEventListener('click', togAll);
+
+    // key shortcut
+    document.addEventListener('keydown', (event) => {
+        event.preventDefault();
+        const keyPress = event.key;
+
+        if (keyPress === 'w') {
+            togWar();
+        } else if (keyPress === 'p') {
+            togPal();
+            
+        } else if (keyPress === 'h') {
+            togHun();
+            
+        } else if (keyPress === 'b') {
+            togBla();
+            
+        } else if (keyPress === 't') {
+            togTra();
+            
+        } else if (keyPress === 'm') {
+            togMag();
+            
+        } else {
+            return;
+        }
+    }, false);
+
+
+
+
+
     // att events
     toxSwitch.addEventListener('click', togTox);
     grSwitch.addEventListener('click', togGr);
@@ -362,22 +402,34 @@ window.onload = function () {
     fireSwitch.addEventListener('click', togFire);
     lightSwitch.addEventListener('click', togLight);
     coldSwitch.addEventListener('click', togCold);
-    // tests
-    const testProfession = () => {
-        console.log(`war: ${war}`);
-        console.log(`pal: ${pal}`);
-        console.log(`hun: ${hun}`);
-        console.log(`bla: ${bla}`);
-        console.log(`tra: ${tra}`);
-        console.log(`mag: ${mag}`);
-        console.log(`all: ${all}`);
-
-    }
-
-    let testProf = document.querySelector('#testProf');
-    testProf.addEventListener('click', testProfession);
 
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === 'j') {
+                togTox();
+            } else if (keyPress === 'k') {
+                togGr();
+                
+            } else if (keyPress === 'l') {
+                togHeal();
+                
+            } else if (keyPress === ',') {
+                togFire();
+                
+            } else if (keyPress === '.') {
+                togLight();
+                
+            } else if (keyPress === '/') {
+                togCold();
+                
+            } else {
+                return;
+            }
+        }, false);
 
     // TABLE SIZES and NOTES
     // itmHeight1 = 0
@@ -439,13 +491,13 @@ window.onload = function () {
         const drawBla = () => {
             if (bla == true) {
 
-                ctx.drawImage(iconTile, 32 * 2, 32, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
+                ctx.drawImage(iconTile, 32 * 3, 32, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
             }
         }
         const drawTra = () => {
             if (tra == true) {
 
-                ctx.drawImage(iconTile, 32 * 3, 32, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
+                ctx.drawImage(iconTile, 32 * 2, 32, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
             }
         }
         const drawMag = () => {
@@ -502,26 +554,6 @@ window.onload = function () {
         drawLight();
         drawCold();
     }
-
-
-    //DRAWING TEST
-    let testBtn = document.querySelector('#primary')
-    let testBtnSecond = document.querySelector('#secondary')
-    const drawTest = () => {
-        varRow = 5;
-        itmHeight = 10;
-        ctx.drawImage(iconTile, 32 * 3, 32 * 3, 32, 32, varRow * 32, itmHeight * 32, 32, 32);
-
-    }
-    const drawTestDesc = () => {
-        varRow = 3;
-        itmHeight = 11;
-        drawDesc();
-
-    }
-    testBtn.addEventListener('click', drawTest);
-    testBtnSecond.addEventListener('click', drawTestDesc);
-
 
     // LOCK PROF AND ATTRIBUTES
     function lockAttCloth() {
@@ -587,6 +619,21 @@ window.onload = function () {
         const btnRemHelmets = document.querySelector('#remHelm-btn');
         btnRemHelmets.addEventListener('click', removeHelmets);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '1') {
+                addHelmets();
+                togAll();
+                attReset();
+            } else if (keyPress === '!') {
+                removeHelmets();
+                return;
+            }
+        }, false);
+
     }
     Helmets();
 
@@ -632,6 +679,21 @@ window.onload = function () {
         const btnRemNecklaces = document.querySelector('#remNeck-btn');
         btnRemNecklaces.addEventListener('click', removeNecklaces);
 
+
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '2') {
+                addNecklaces();
+                togAll();
+                attReset();
+            } else if (keyPress === '@') {
+                removeNecklaces();
+                return;
+            }
+        }, false);
 
 
     }
@@ -680,6 +742,24 @@ window.onload = function () {
         const btnRemRings = document.querySelector('#remRing-btn');
         btnRemRings.addEventListener('click', removeRings);
 
+
+
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '3') {
+                addRings();
+                togAll();
+                attReset();
+            } else if (keyPress === '#') {
+                removeRings();
+                return;
+            }
+        }, false);
+
+
     }
     Rings();
 
@@ -725,6 +805,21 @@ window.onload = function () {
         btnAddGloves.addEventListener('click', addGloves);
         const btnRemGloves = document.querySelector('#remGloves-btn');
         btnRemGloves.addEventListener('click', removeGloves);
+
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '4') {
+                addGloves();
+                togAll();
+                attReset();
+            } else if (keyPress === '$') {
+                removeGloves();
+                return;
+            }
+        }, false);
 
 
     }
@@ -774,6 +869,21 @@ window.onload = function () {
         const btnRemArmor = document.querySelector('#remArmor-btn');
         btnRemArmor.addEventListener('click', removeArmor);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '5') {
+                addArmor();
+                togAll();
+                attReset();
+            } else if (keyPress === '%') {
+                removeArmor();
+                return;
+            }
+        }, false);
+
 
     }
     Armor();
@@ -820,6 +930,21 @@ window.onload = function () {
         btnAddBoots.addEventListener('click', addBoots);
         const btnRemBoots = document.querySelector('#remBoots-btn');
         btnRemBoots.addEventListener('click', removeBoots);
+
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '6') {
+                addBoots();
+                togAll();
+                attReset();
+            } else if (keyPress === '^') {
+                removeBoots();
+                return;
+            }
+        }, false);
 
 
     }
@@ -869,6 +994,20 @@ window.onload = function () {
         const btnRemBow = document.querySelector('#remBow-btn');
         btnRemBow.addEventListener('click', removeBow);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '7') {
+                addBow();
+                togAll();
+                attReset();
+            } else if (keyPress === '&') {
+                removeBow();
+                return;
+            }
+        }, false);
 
     }
     Bow();
@@ -915,6 +1054,20 @@ window.onload = function () {
         const btnRemArrow = document.querySelector('#remArrow-btn');
         btnRemArrow.addEventListener('click', removeArrow);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '8') {
+                addArrow();
+                togAll();
+                attReset();
+            } else if (keyPress === '*') {
+                removeArrow();
+                return;
+            }
+        }, false);
 
     }
     Arrow();
@@ -965,6 +1118,20 @@ window.onload = function () {
         const btnRemQuiver = document.querySelector('#remQuiver-btn');
         btnRemQuiver.addEventListener('click', removeQuiver);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '9') {
+                addQuiver();
+                togAll();
+                attReset();
+            } else if (keyPress === '(') {
+                removeQuiver();
+                return;
+            }
+        }, false);
 
     }
     Quiver();
@@ -1015,6 +1182,20 @@ window.onload = function () {
         const btnRemSabre = document.querySelector('#remSabre-btn');
         btnRemSabre.addEventListener('click', removeSabre);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '0') {
+                addSabre();
+                togAll();
+                attReset();
+            } else if (keyPress === ')') {
+                removeSabre();
+                return;
+            }
+        }, false);
 
     }
     Sabre();
@@ -1063,6 +1244,20 @@ window.onload = function () {
         const btnRemShield = document.querySelector('#remShield-btn');
         btnRemShield.addEventListener('click', removeShield);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '-') {
+                addShield();
+                togAll();
+                attReset();
+            } else if (keyPress === '_') {
+                removeShield();
+                return;
+            }
+        }, false);
 
     }
     Shield();
@@ -1111,6 +1306,20 @@ window.onload = function () {
         const btnRemDagger = document.querySelector('#remDagger-btn');
         btnRemDagger.addEventListener('click', removeDagger);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === '=') {
+                addDagger();
+                togAll();
+                attReset();
+            } else if (keyPress === '+') {
+                removeDagger();
+                return;
+            }
+        }, false);
 
     }
     Dagger();
@@ -1159,7 +1368,20 @@ window.onload = function () {
         const btnRemWand = document.querySelector('#remWand-btn');
         btnRemWand.addEventListener('click', removeWand);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
 
+            if (keyPress === '[') {
+                addWand();
+                togAll();
+                attReset();
+            } else if (keyPress === '{') {
+                removeWand();
+                return;
+            }
+        }, false);
     }
     Wand();
 
@@ -1207,7 +1429,20 @@ window.onload = function () {
         const btnRemOrb = document.querySelector('#remOrb-btn');
         btnRemOrb.addEventListener('click', removeOrb);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
 
+            if (keyPress === ']') {
+                addOrb();
+                togAll();
+                attReset();
+            } else if (keyPress === '}') {
+                removeOrb();
+                return;
+            }
+        }, false);
     }
     Orb();
 
@@ -1254,7 +1489,20 @@ window.onload = function () {
         const btnRemSword = document.querySelector('#remSword-btn');
         btnRemSword.addEventListener('click', removeSword);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
 
+            if (keyPress === ';') {
+                addSword();
+                togAll();
+                attReset();
+            } else if (keyPress === ':') {
+                removeSword();
+                return;
+            }
+        }, false);
     }
     Sword();
 
@@ -1302,7 +1550,20 @@ window.onload = function () {
         const btnRemAxe = document.querySelector('#remAxe-btn');
         btnRemAxe.addEventListener('click', removeAxe);
 
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
 
+            if (keyPress === '\'') {
+                addAxe();
+                togAll();
+                attReset();
+            } else if (keyPress === '\"') {
+                removeAxe();
+                return;
+            }
+        }, false);
     }
     Axe();
 
@@ -1345,9 +1606,6 @@ window.onload = function () {
     // setting rarirty
     // const rareZwy = document.querySelector('#iRareZwy');
 
-    const testingRare = document.querySelector('#testRare');
-    testingRare.addEventListener('click', checkRare);
-
 
     let btnZwy = document.querySelector('#iRareZwy');
     btnZwy.addEventListener('click', setItemZwy);
@@ -1357,6 +1615,47 @@ window.onload = function () {
     btnHer.addEventListener('click', setItemHer);
     let btnLeg = document.querySelector('#iRareLeg');
     btnLeg.addEventListener('click', setItemLeg);
+
+        // key shortcut
+        document.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            const keyPress = event.key;
+
+            if (keyPress === 'z') {
+                setItemZwy();
+            } else if (keyPress === 'x') {
+                setItemUni();
+                
+            } else if (keyPress === 'c') {
+                setItemHer();
+                
+            } else if (keyPress === 'v') {
+                setItemLeg();
+                
+            } else {
+                return;
+            }
+        }, false);
+
+
+    // KEY SHORTCUTS
+
+    // document.addEventListener('keydown', e => {
+    //     e.preventDefault();
+    //         if (
+    //             e.key.toLowerCase === '1'
+    //         ) {
+    //             alert('jeden')
+    //         }
+    // });
+
+
+
+
+
+
+
+
 
 
 
