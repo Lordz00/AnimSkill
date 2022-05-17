@@ -369,6 +369,7 @@ window.onload = function () {
     // key shortcut
     document.addEventListener('keydown', (event) => {
          
+        event.preventDefault();
         const keyPress = event.key;
 
         if (keyPress === 'w') {
@@ -409,6 +410,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === 'j') {
@@ -624,6 +626,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '1') {
@@ -685,6 +688,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '2') {
@@ -749,6 +753,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '3') {
@@ -811,6 +816,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '4') {
@@ -874,6 +880,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '5') {
@@ -936,6 +943,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '6') {
@@ -999,6 +1007,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '7') {
@@ -1059,6 +1068,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '8') {
@@ -1123,6 +1133,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '9') {
@@ -1187,6 +1198,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '0') {
@@ -1249,6 +1261,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '-') {
@@ -1311,6 +1324,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '=') {
@@ -1373,6 +1387,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '[') {
@@ -1434,6 +1449,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === ']') {
@@ -1494,6 +1510,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === ';') {
@@ -1555,6 +1572,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === '\'') {
@@ -1618,6 +1636,7 @@ window.onload = function () {
         // key shortcut
         document.addEventListener('keydown', (event) => {
              
+            event.preventDefault();
             const keyPress = event.key;
 
             if (keyPress === 'z') {
